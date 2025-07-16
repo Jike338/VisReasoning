@@ -1,0 +1,10 @@
+update generation functions so that it supports resume generation
+when to require padding_left
+implement gpt_extract=False
+
+
+# cot prompts needs to be "First output xxx", "Please first output xxx" doesn't work. 
+# from gpt: Smaller models like Qwen2-VL-2B-Instruct often fail to follow polite or indirect instructions (e.g., starting with “Please”) because they are more sensitive to phrasing and have limited capacity to generalize across different styles of prompts. In contrast, larger models like the 7B version better understand the intent behind softer or more natural language due to their greater capacity and likely richer instruction tuning. To ensure consistent behavior across model sizes, it's best to use clear, direct, imperative-style prompts without extra softening language.
+
+
+salloc --nodes=1 --gres=gpu:4 --cpus-per-task=8 --mem=180G
