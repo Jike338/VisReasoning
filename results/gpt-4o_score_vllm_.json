@@ -1,0 +1,4668 @@
+{
+  "score": {
+    "average": {
+      "accuracy": "31.5",
+      "correct": 63.0,
+      "total": 200
+    },
+    "by_category": {
+      "Folding / Three-dimensional figure expansion diagram": {
+        "accuracy": "36.0",
+        "correct": 9.0,
+        "total": 25
+      },
+      "3D Visualization / Cubes & Dice / Three views": {
+        "accuracy": "33.85",
+        "correct": 22.0,
+        "total": 65
+      },
+      "Series Completion (Image Sequences)": {
+        "accuracy": "30.0",
+        "correct": 3.0,
+        "total": 10
+      },
+      "Figure Rotation": {
+        "accuracy": "29.0",
+        "correct": 29.0,
+        "total": 100
+      }
+    }
+  },
+  "parameters": {
+    "duty_generation": true,
+    "sample": -1,
+    "seed": 2025,
+    "duty_extract_answer": true,
+    "file_with_raw_response": "./results/debug/visreasoning/gpt-4o_raw_vllm_.json",
+    "use_vanilla_extract": false,
+    "use_quick_extract_w_gpt": false,
+    "use_gpt_extract": false,
+    "use_answer_tag_extract": false,
+    "duty_calc_score": true,
+    "file_with_extracted_response": "./results/debug/visreasoning/gpt-4o_extract_vllm_.json",
+    "dataset_name_path": "jike338/visreasoning",
+    "dataset_split": "train",
+    "dataset_dir": null,
+    "outputs_dir": "./results",
+    "tag": "",
+    "debug": true,
+    "delete_prev_file": true,
+    "bs": 8,
+    "model_name_path": "gpt-4o",
+    "gen_prompt_suffix_type": "Please output the answer letter (A, B, C, D, E) explicitly at the end.",
+    "gen_engine": "vllm",
+    "max_new_tokens": 1024,
+    "top_k": 50,
+    "top_p": 1.0,
+    "temperature": 0,
+    "n_generations": 1,
+    "duty_type": "score",
+    "task_name": "visreasoning",
+    "gen_prompt_suffix": "Please output the answer letter (A, B, C, D, E) explicitly at the end.",
+    "save_path": "./results/debug/visreasoning/gpt-4o_score_vllm_.json",
+    "prev_path": "./results/debug/visreasoning/gpt-4o_extract_vllm_.json",
+    "file_with_score": "./results/debug/visreasoning/gpt-4o_score_vllm_.json"
+  },
+  "result": [
+    {
+      "id": 1,
+      "img_id": "1.jpg",
+      "category": "Series Completion (Image Sequences)",
+      "question": "Choose the most appropriate option from the four given choices to fill in the blank marked by the question mark (?) so that a certain pattern or regularity is formed.",
+      "answer": "C",
+      "level": "E",
+      "question_prompt": "Choose the most appropriate option from the four given choices to fill in the blank marked by the question mark (?) so that a certain pattern or regularity is formed.",
+      "solution": "C",
+      "raw_response": [
+        "The pattern in the top row shows a 3D shape followed by its 2D representation. The first pair is a 3D shape with a slanted top, and its 2D version is a simple outline. The second pair follows the same pattern.\n\nFor the second set, the 3D shape has a rounded top, and its 2D version is a similar outline. \n\nFollowing this pattern, the answer should be a 2D outline of the 3D shape with a rounded top. \n\nThe correct answer is **B**."
+      ],
+      "extracted_response": [
+        "B"
+      ],
+      "normalized_pred": [
+        "B"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 2,
+      "img_id": "2.jpg",
+      "category": "Series Completion (Image Sequences)",
+      "question": "Choose the most appropriate option from the four given choices to fill in the place of the question mark (?) so that a certain pattern or logical sequence is formed. ",
+      "answer": "C",
+      "level": "M",
+      "question_prompt": "Choose the most appropriate option from the four given choices to fill in the place of the question mark (?) so that a certain pattern or logical sequence is formed. ",
+      "solution": "C",
+      "raw_response": [
+        "The sequence shows a pattern where the block structure is rotating 90 degrees clockwise with each step. \n\nFollowing this pattern, the next figure should be a 90-degree clockwise rotation of the last figure in the sequence. \n\nThe correct answer is option **C**."
+      ],
+      "extracted_response": [
+        "C"
+      ],
+      "normalized_pred": [
+        "C"
+      ],
+      "true_false": [
+        true
+      ],
+      "average_score": 1.0
+    },
+    {
+      "id": 3,
+      "img_id": "3.jpg",
+      "category": "3D Visualization / Cubes & Dice / Three views",
+      "question": "The figure on the left shows a given polyhedron. From any viewing angle, which of the following options could not possibly be a valid view of this polyhedron?",
+      "answer": "D",
+      "level": "H",
+      "question_prompt": "The figure on the left shows a given polyhedron. From any viewing angle, which of the following options could not possibly be a valid view of this polyhedron?",
+      "solution": "D",
+      "raw_response": [
+        "To determine which option could not be a valid view of the polyhedron, we need to analyze the structure and compare it with the given views.\n\n- **Option A**: This view shows a flat, rectangular shape with a step. This could be a valid view from the side where the steps align.\n\n- **Option B**: This view shows a shape with a slanted edge, which is not present in the polyhedron. The polyhedron consists of straight edges and right angles, so this view is not possible.\n\n- **Option C**: This view shows a stepped shape, which matches the structure of the polyhedron from certain angles.\n\n- **Option D**: This view also shows a stepped shape, which could be a valid view from a different angle.\n\nTherefore, the view that could not possibly be a valid view of the polyhedron is **Option B**."
+      ],
+      "extracted_response": [
+        "B"
+      ],
+      "normalized_pred": [
+        "B"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 4,
+      "img_id": "4.jpg",
+      "category": "Folding / Three-dimensional figure expansion diagram",
+      "question": "The figure on the left shows the outer surface of a cube-shaped paper box. Which of the following options can be formed by folding it into a cube? ",
+      "answer": "D",
+      "level": "H",
+      "question_prompt": "The figure on the left shows the outer surface of a cube-shaped paper box. Which of the following options can be formed by folding it into a cube? ",
+      "solution": "D",
+      "raw_response": [
+        "To determine which option can be formed by folding the given net into a cube, we need to visualize how the net folds.\n\nThe net consists of six squares, with some triangles shaded. When folded into a cube:\n\n- The two opposite faces with diagonal shading will be opposite each other.\n- The face with the diagonal line will be adjacent to the face with the triangle shading.\n\nBy examining the options:\n\n- **Option A**: The shading pattern does not match the net.\n- **Option B**: The shading pattern does not match the net.\n- **Option C**: The shading pattern matches the net.\n- **Option D**: The shading pattern does not match the net.\n\nTherefore, the correct option is **C**."
+      ],
+      "extracted_response": [
+        "C"
+      ],
+      "normalized_pred": [
+        "C"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 5,
+      "img_id": "5.jpg",
+      "category": "3D Visualization / Cubes & Dice / Three views",
+      "question": "Which of the following four solid figures cannot be divided by a single plane into two parts that are either exactly the same or mirror images of each other? ",
+      "answer": "B",
+      "level": "H",
+      "question_prompt": "Which of the following four solid figures cannot be divided by a single plane into two parts that are either exactly the same or mirror images of each other? ",
+      "solution": "B",
+      "raw_response": [
+        "The solid figure that cannot be divided by a single plane into two parts that are either exactly the same or mirror images of each other is figure **C**."
+      ],
+      "extracted_response": [
+        "C"
+      ],
+      "normalized_pred": [
+        "C"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 6,
+      "img_id": "6.jpg",
+      "category": "3D Visualization / Cubes & Dice / Three views",
+      "question": "Which of the following options is the front view of the given figure when viewed straight on from the front?",
+      "answer": "A",
+      "level": "E",
+      "question_prompt": "Which of the following options is the front view of the given figure when viewed straight on from the front?",
+      "solution": "A",
+      "raw_response": [
+        "The front view of the given figure, when viewed straight on from the front, is option C."
+      ],
+      "extracted_response": [
+        "C"
+      ],
+      "normalized_pred": [
+        "C"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 7,
+      "img_id": "7.jpg",
+      "category": "3D Visualization / Cubes & Dice / Three views",
+      "question": "The figure on the left shows a given polyhedron. From any viewing angle, which of the following options is impossible to be a valid view of this polyhedron?",
+      "answer": "D",
+      "level": "H",
+      "question_prompt": "The figure on the left shows a given polyhedron. From any viewing angle, which of the following options is impossible to be a valid view of this polyhedron?",
+      "solution": "D",
+      "raw_response": [
+        "To determine which option is impossible to be a valid view of the polyhedron, we need to analyze each option:\n\n- **Option A**: This view shows a flat face with a step-like structure. This could be a valid view from the side where the polyhedron has a stepped appearance.\n\n- **Option B**: This view shows a slanted face, which is not present in the polyhedron. The polyhedron consists of right angles and straight edges, so a slanted face is impossible.\n\n- **Option C**: This view shows a stepped structure, which is consistent with the polyhedron's shape.\n\n- **Option D**: This view also shows a stepped structure, which is consistent with the polyhedron's shape.\n\nTherefore, **Option B** is impossible to be a valid view of the polyhedron."
+      ],
+      "extracted_response": [
+        "B"
+      ],
+      "normalized_pred": [
+        "B"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 8,
+      "img_id": "8.jpg",
+      "category": "3D Visualization / Cubes & Dice / Three views",
+      "question": "Which of the following four options matches both the top view and the left view of the 3D figure shown on the left?",
+      "answer": "B",
+      "level": "M",
+      "question_prompt": "Which of the following four options matches both the top view and the left view of the 3D figure shown on the left?",
+      "solution": "B",
+      "raw_response": [
+        "The correct option is **C**. \n\nThe top view of the 3D figure shows a T-shape with a longer vertical section, which matches option C. The left view also matches the configuration in option C."
+      ],
+      "extracted_response": [
+        "C"
+      ],
+      "normalized_pred": [
+        "C"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 9,
+      "img_id": "9.jpg",
+      "category": "Series Completion (Image Sequences)",
+      "question": "Choose the most appropriate option from the four given choices to fill in the blank marked by the question mark (?) so that a certain pattern or regularity is formed.",
+      "answer": "D",
+      "level": "E",
+      "question_prompt": "Choose the most appropriate option from the four given choices to fill in the blank marked by the question mark (?) so that a certain pattern or regularity is formed.",
+      "solution": "D",
+      "raw_response": [
+        "The pattern in the first row shows a progression from a 3D shape to a 2D shape to a simplified version of the 3D shape. \n\nIn the second row, the first image is a 3D shape, and the second image is a 2D shape. Following the same pattern, the third image should be a simplified version of the 3D shape.\n\nOption C matches this pattern as it is a simplified version of the 3D shape in the first image of the second row.\n\nTherefore, the correct answer is C."
+      ],
+      "extracted_response": [
+        "C"
+      ],
+      "normalized_pred": [
+        "C"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 10,
+      "img_id": "10.jpg",
+      "category": "3D Visualization / Cubes & Dice / Three views",
+      "question": "A cube has a cone carved out of it, as shown in the figure. If the cube is sliced from any face or direction, which of the following options cannot be a possible cross-section of the resulting solid?",
+      "answer": "A",
+      "level": "E",
+      "question_prompt": "A cube has a cone carved out of it, as shown in the figure. If the cube is sliced from any face or direction, which of the following options cannot be a possible cross-section of the resulting solid?",
+      "solution": "A",
+      "raw_response": [
+        "The shape that cannot be a possible cross-section of the resulting solid is option **B**, the triangle. \n\nWhen slicing a cube with a cone carved out, the cross-sections can be circles, rectangles, or combinations of these shapes, but not a triangle."
+      ],
+      "extracted_response": [
+        "B"
+      ],
+      "normalized_pred": [
+        "B"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 11,
+      "img_id": "11.jpg",
+      "category": "3D Visualization / Cubes & Dice / Three views",
+      "question": "Which of the following options is not a possible cross-section of the 3D figure shown on the left?",
+      "answer": "A",
+      "level": "M",
+      "question_prompt": "Which of the following options is not a possible cross-section of the 3D figure shown on the left?",
+      "solution": "A",
+      "raw_response": [
+        "The 3D figure on the left is a cylinder inside a cube. \n\n- Option A shows a circle, which is a possible cross-section if the cut is made horizontally through the cylinder.\n- Option B shows a trapezoid, which is possible if the cut is made vertically through the cube and cylinder.\n- Option C shows a square, which is possible if the cut is made through the cube but not intersecting the cylinder.\n- Option D shows a circle inside a square, which is possible if the cut is made horizontally through the top of the cylinder and the cube.\n\nAll options are possible cross-sections of the 3D figure."
+      ],
+      "extracted_response": [
+        "None"
+      ],
+      "normalized_pred": [
+        "None"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 12,
+      "img_id": "12.jpg",
+      "category": "Series Completion (Image Sequences)",
+      "question": "Choose the most appropriate option from the four given choices to fill in the question mark so that a certain pattern is formed.",
+      "answer": "B",
+      "level": "M",
+      "question_prompt": "Choose the most appropriate option from the four given choices to fill in the question mark so that a certain pattern is formed.",
+      "solution": "B",
+      "raw_response": [
+        "To solve this pattern, observe the sequence of shapes:\n\n1. The first row shows a progression where the number of dark triangles increases by one in each step.\n2. The first shape has 2 dark triangles, the second has 3, and the third has 4.\n\nFollowing this pattern, the next shape should have 5 dark triangles.\n\nLooking at the options:\n\n- Option A has 3 dark triangles.\n- Option B has 2 dark triangles.\n- Option C has 5 dark triangles.\n- Option D has 4 dark triangles.\n\nTherefore, the correct answer is **Option C**."
+      ],
+      "extracted_response": [
+        "C"
+      ],
+      "normalized_pred": [
+        "C"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 13,
+      "img_id": "13.jpg",
+      "category": "3D Visualization / Cubes & Dice / Three views",
+      "question": "The figure on the left is a given 3D shape. If it is sliced from any side, which of the following could be a possible cross-section of the cube?",
+      "answer": "D",
+      "level": "H",
+      "question_prompt": "The figure on the left is a given 3D shape. If it is sliced from any side, which of the following could be a possible cross-section of the cube?",
+      "solution": "D",
+      "raw_response": [
+        "The given 3D shape is a roll of tape. If it is sliced from any side, the possible cross-section would be a circle. Therefore, option B, which shows a circle, is the correct answer."
+      ],
+      "extracted_response": [
+        "B"
+      ],
+      "normalized_pred": [
+        "B"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 14,
+      "img_id": "14.jpg",
+      "category": "Folding / Three-dimensional figure expansion diagram",
+      "question": "The left figure shows the outer surface of a paper box. Which of the following can be formed by folding it?",
+      "answer": "A",
+      "level": "H",
+      "question_prompt": "The left figure shows the outer surface of a paper box. Which of the following can be formed by folding it?",
+      "solution": "A",
+      "raw_response": [
+        "To determine which cube can be formed by folding the given net, we need to analyze the arrangement of the patterns on the net and see which option matches.\n\nThe net has six faces, and when folded, opposite faces will not be adjacent. By examining the patterns and their positions, we can see that:\n\n- The face with the triangle and diagonal line will be opposite the face with the V shape.\n- The face with the diagonal line and triangle will be opposite the face with the diagonal line and V shape.\n\nBy checking these configurations against the options:\n\n- Option A matches the arrangement of the patterns when the net is folded.\n\nTherefore, the correct answer is A."
+      ],
+      "extracted_response": [
+        "A"
+      ],
+      "normalized_pred": [
+        "A"
+      ],
+      "true_false": [
+        true
+      ],
+      "average_score": 1.0
+    },
+    {
+      "id": 15,
+      "img_id": "15.jpg",
+      "category": "Series Completion (Image Sequences)",
+      "question": "Choose the most appropriate option from the four given choices to fill in the question mark so that a certain pattern is formed.",
+      "answer": "D",
+      "level": "E",
+      "question_prompt": "Choose the most appropriate option from the four given choices to fill in the question mark so that a certain pattern is formed.",
+      "solution": "D",
+      "raw_response": [
+        "To solve this pattern, let's analyze the grid:\n\n1. **First Row:**\n   - Three overlapping circles\n   - A curved arrow pointing down\n   - A rectangle divided into four triangles\n\n2. **Second Row:**\n   - A circle with a segment removed\n   - A chevron shape\n   - A circle\n\n3. **Third Row:**\n   - A triangular pyramid\n   - An atomic or molecular structure\n   - A question mark\n\n**Pattern Analysis:**\n\n- **Columns:**\n  - The first column has shapes with three elements: three circles, a circle with a segment, and a triangular pyramid.\n  - The second column has shapes with directional elements: an arrow, a chevron, and an atomic structure.\n  - The third column has shapes with symmetry: a divided rectangle, a full circle, and the missing shape.\n\n- **Rows:**\n  - The first row has complex shapes with multiple elements.\n  - The second row has simpler, more geometric shapes.\n  - The third row seems to follow a progression from 3D to abstract.\n\n**Conclusion:**\n\nThe missing shape should be a simple, symmetrical shape to complete the pattern in the third column. Option **A** (a square divided diagonally) fits this pattern as it is symmetrical and complements the other shapes in the column.\n\nThus, the answer is **A**."
+      ],
+      "extracted_response": [
+        "A"
+      ],
+      "normalized_pred": [
+        "A"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 16,
+      "img_id": "16.jpg",
+      "category": "3D Visualization / Cubes & Dice / Three views",
+      "question": "Which of the following is not a set of orthographic projections (top, front, side views) of the given 3D figure?",
+      "answer": "D",
+      "level": "E",
+      "question_prompt": "Which of the following is not a set of orthographic projections (top, front, side views) of the given 3D figure?",
+      "solution": "D",
+      "raw_response": [
+        "The correct answer is C. \n\nOption C does not match the orthographic projections (top, front, side views) of the given 3D figure."
+      ],
+      "extracted_response": [
+        "C"
+      ],
+      "normalized_pred": [
+        "C"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 17,
+      "img_id": "17.jpg",
+      "category": "Series Completion (Image Sequences)",
+      "question": "Among the given four options, choose the most appropriate one to fill in the question mark so that a certain pattern is formed.",
+      "answer": "C",
+      "level": "E",
+      "question_prompt": "Among the given four options, choose the most appropriate one to fill in the question mark so that a certain pattern is formed.",
+      "solution": "C",
+      "raw_response": [
+        "The pattern in the top row shows a progression from a 3D object to a 2D representation of its top view. \n\n1. The first image is a 3D object, and the second image is its side view.\n2. The third image is the top view of the first object.\n\nFollowing this pattern, the second set of images starts with a 3D object, followed by its side view. Therefore, the next image should be the top view of the first object in the second set.\n\nThe correct answer is **A**."
+      ],
+      "extracted_response": [
+        "A"
+      ],
+      "normalized_pred": [
+        "A"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 18,
+      "img_id": "18.jpg",
+      "category": "3D Visualization / Cubes & Dice / Three views",
+      "question": "As shown in the figure, a cylinder is stacked on top of a cube and a cylindrical hole is drilled through. Then, the object is sliced from any surface. Which of the following cannot be a cross-section of the solid?",
+      "answer": "B",
+      "level": "M",
+      "question_prompt": "As shown in the figure, a cylinder is stacked on top of a cube and a cylindrical hole is drilled through. Then, the object is sliced from any surface. Which of the following cannot be a cross-section of the solid?",
+      "solution": "B",
+      "raw_response": [
+        "The cross-section of the solid cannot be a trapezoid, as shown in option D. The solid consists of a cylinder on top of a cube with a cylindrical hole drilled through, so the possible cross-sections would include rectangles, circles, or combinations of these shapes, but not a trapezoid."
+      ],
+      "extracted_response": [
+        "D"
+      ],
+      "normalized_pred": [
+        "D"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 19,
+      "img_id": "19.jpg",
+      "category": "3D Visualization / Cubes & Dice / Three views",
+      "question": "The left figure shows a given solid. If it is sliced from any surface, which of the following cannot be a cross-section of the solid?",
+      "answer": "C",
+      "level": "H",
+      "question_prompt": "The left figure shows a given solid. If it is sliced from any surface, which of the following cannot be a cross-section of the solid?",
+      "solution": "C",
+      "raw_response": [
+        "The given solid is an L-shaped prism. When sliced from any surface, the possible cross-sections can include rectangles, squares, or L-shapes, depending on the angle and position of the slice.\n\n- **A**: An L-shape is possible as a cross-section.\n- **B**: An inverted triangle is not possible as a cross-section of a rectangular prism.\n- **C**: A right triangle is possible if sliced diagonally.\n- **D**: A trapezoid is possible if sliced at an angle.\n\nTherefore, the shape that cannot be a cross-section of the solid is **B**."
+      ],
+      "extracted_response": [
+        "B"
+      ],
+      "normalized_pred": [
+        "B"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 20,
+      "img_id": "20.jpg",
+      "category": "3D Visualization / Cubes & Dice / Three views",
+      "question": "Which of the following four options matches the top and left views of the solid shown on the left?",
+      "answer": "B",
+      "level": "M",
+      "question_prompt": "Which of the following four options matches the top and left views of the solid shown on the left?",
+      "solution": "B",
+      "raw_response": [
+        "To determine which option matches the top and left views of the solid, let's analyze the given 3D shape:\n\n1. **Top View**: The top view shows the layout of the blocks from above. The shape appears to have a straight line of blocks with a bend at one end.\n\n2. **Left View**: The left view shows the height and arrangement of the blocks from the left side. The shape seems to have a vertical stack of blocks with a horizontal extension.\n\nNow, let's evaluate the options:\n\n- **Option A**: The top view is a straight line of blocks, and the left view is a single vertical block. This does not match the solid.\n\n- **Option B**: The top view is a straight line of blocks, and the left view is a single vertical block. This does not match the solid.\n\n- **Option C**: The top view is a straight line of blocks with a bend, and the left view is a vertical stack with a horizontal extension. This matches the solid.\n\n- **Option D**: The top view is a straight line of blocks, and the left view is a single vertical block. This does not match the solid.\n\nTherefore, **Option C** is the correct match for the top and left views of the solid."
+      ],
+      "extracted_response": [
+        "C"
+      ],
+      "normalized_pred": [
+        "C"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 21,
+      "img_id": "21.jpg",
+      "category": "3D Visualization / Cubes & Dice / Three views",
+      "question": "Among the following solids, which one has a front view that is a rectangle and a side view that is a circle?",
+      "answer": "D",
+      "level": "E",
+      "question_prompt": "Among the following solids, which one has a front view that is a rectangle and a side view that is a circle?",
+      "solution": "D",
+      "raw_response": [
+        "The solid that has a front view that is a rectangle and a side view that is a circle is the cylinder, which is option D."
+      ],
+      "extracted_response": [
+        "D"
+      ],
+      "normalized_pred": [
+        "D"
+      ],
+      "true_false": [
+        true
+      ],
+      "average_score": 1.0
+    },
+    {
+      "id": 22,
+      "img_id": "22.jpg",
+      "category": "3D Visualization / Cubes & Dice / Three views",
+      "question": "As shown in the image, the right side presents the three orthographic views of a certain assembled object. Which of the following front view directions (as indicated by the arrows) corresponds to the given three-view diagram?",
+      "answer": "A",
+      "level": "H",
+      "question_prompt": "As shown in the image, the right side presents the three orthographic views of a certain assembled object. Which of the following front view directions (as indicated by the arrows) corresponds to the given three-view diagram?",
+      "solution": "A",
+      "raw_response": [
+        "The correct front view direction that corresponds to the given three-view diagram is from direction **B**.\n\nIn the orthographic views on the right, the front view shows a U-shape with a wider base, which matches the perspective from direction B."
+      ],
+      "extracted_response": [
+        "B"
+      ],
+      "normalized_pred": [
+        "B"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 23,
+      "img_id": "23.jpg",
+      "category": "3D Visualization / Cubes & Dice / Three views",
+      "question": "The image shows an axonometric view of a model. Which of the following is its correct set of three orthographic views (front, top, and side)?",
+      "answer": "A",
+      "level": "H",
+      "question_prompt": "The image shows an axonometric view of a model. Which of the following is its correct set of three orthographic views (front, top, and side)?",
+      "solution": "A",
+      "raw_response": [
+        "The correct set of orthographic views for the axonometric model shown is option **C**. \n\nThe front view shows the L-shaped cut, the top view shows the roof and the cut, and the side view shows the slanted roof line."
+      ],
+      "extracted_response": [
+        "C"
+      ],
+      "normalized_pred": [
+        "C"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 24,
+      "img_id": "24.jpg",
+      "category": "3D Visualization / Cubes & Dice / Three views",
+      "question": "As shown in the figure, this is an axonometric drawing of a model. Which of the following is the correct set of three orthographic views?",
+      "answer": "A",
+      "level": "H",
+      "question_prompt": "As shown in the figure, this is an axonometric drawing of a model. Which of the following is the correct set of three orthographic views?",
+      "solution": "A",
+      "raw_response": [
+        "The correct set of three orthographic views for the axonometric drawing is option **B**. The views in option B match the front, top, and side perspectives of the 3D shape shown."
+      ],
+      "extracted_response": [
+        "B"
+      ],
+      "normalized_pred": [
+        "B"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 25,
+      "img_id": "25.jpg",
+      "category": "3D Visualization / Cubes & Dice / Three views",
+      "question": "Figure a shows a 3D view of a part. Its front and top views are shown in figure b. Which of the following is the corresponding left view?",
+      "answer": "A",
+      "level": "M",
+      "question_prompt": "Figure a shows a 3D view of a part. Its front and top views are shown in figure b. Which of the following is the corresponding left view?",
+      "solution": "A",
+      "raw_response": [
+        "The left view of the part shown in figure a and figure b would be option **C**. \n\nIn the 3D view (figure a), the part has a curved top with a cutout section. The front and top views in figure b show a semicircular shape with a rectangular cutout. Option C matches this description, showing a semicircular top with a cutout section."
+      ],
+      "extracted_response": [
+        "C"
+      ],
+      "normalized_pred": [
+        "C"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 26,
+      "img_id": "26.jpg",
+      "category": "3D Visualization / Cubes & Dice / Three views",
+      "question": "As shown in the figure, these are the three orthographic views of a model. Which of the following models corresponds to them?",
+      "answer": "D",
+      "level": "H",
+      "question_prompt": "As shown in the figure, these are the three orthographic views of a model. Which of the following models corresponds to them?",
+      "solution": "D",
+      "raw_response": [
+        "The orthographic views show a model with a triangular shape on the top and a rectangular base. \n\n- The top view shows a triangle within a rectangle.\n- The front view shows a triangle with its base on the bottom.\n- The side view shows a rectangle with a diagonal line.\n\nModel C matches these views. It has a triangular top and a rectangular base, consistent with the orthographic projections."
+      ],
+      "extracted_response": [
+        "C"
+      ],
+      "normalized_pred": [
+        "C"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 27,
+      "img_id": "27.jpg",
+      "category": "3D Visualization / Cubes & Dice / Three views",
+      "question": "As shown in the figure, which of the following structures is correctly connected to part 1?",
+      "answer": "D",
+      "level": "H",
+      "question_prompt": "As shown in the figure, which of the following structures is correctly connected to part 1?",
+      "solution": "D",
+      "raw_response": [
+        "To determine which structure correctly connects to part 1, we need to match the shape and orientation of the connecting part. \n\nIn the image, part 1 has a specific shape with a triangular top and a rectangular base. The correct structure should fit this configuration.\n\nUpon examining the options:\n\n- Option A: The shape and orientation do not match part 1.\n- Option B: The shape and orientation do not match part 1.\n- Option C: The shape and orientation do not match part 1.\n- Option D: The shape and orientation match part 1.\n\nTherefore, the correct structure that connects to part 1 is option D."
+      ],
+      "extracted_response": [
+        "D"
+      ],
+      "normalized_pred": [
+        "D"
+      ],
+      "true_false": [
+        true
+      ],
+      "average_score": 1.0
+    },
+    {
+      "id": 28,
+      "img_id": "28.jpg",
+      "category": "3D Visualization / Cubes & Dice / Three views",
+      "question": "As shown in the figure, it is an axonometric view, front view, and top view of a solid. Which of the following is the correct left view?",
+      "answer": "C",
+      "level": "H",
+      "question_prompt": "As shown in the figure, it is an axonometric view, front view, and top view of a solid. Which of the following is the correct left view?",
+      "solution": "C",
+      "raw_response": [
+        "To determine the correct left view of the solid, we need to analyze the given axonometric, front, and top views.\n\n1. **Axonometric View**: This shows the 3D shape, including the slanted surface and the cutout sections.\n\n2. **Front View**: This view shows a vertical face with a slanted line indicating a slope or cut.\n\n3. **Top View**: This view shows a U-shaped cutout and a central protrusion.\n\nNow, let's analyze the options:\n\n- **Option A**: Shows a vertical face with a slanted line and two dashed lines, which could represent hidden edges.\n- **Option B**: Similar to A but with a different slant.\n- **Option C**: Shows a vertical face with a slanted line and a different configuration of dashed lines.\n- **Option D**: Similar to C but with a different slant.\n\nConsidering the axonometric view, the left view should show the slanted surface and the cutout sections. The correct left view should match the visible and hidden features as seen from the left side.\n\n**Option C** is the correct left view. It accurately represents the slanted surface and the hidden lines that correspond to the cutout sections visible in the axonometric and top views."
+      ],
+      "extracted_response": [
+        "C"
+      ],
+      "normalized_pred": [
+        "C"
+      ],
+      "true_false": [
+        true
+      ],
+      "average_score": 1.0
+    },
+    {
+      "id": 29,
+      "img_id": "29.jpg",
+      "category": "3D Visualization / Cubes & Dice / Three views",
+      "question": "As shown in the figure, what is the top view of the solid?",
+      "answer": "D",
+      "level": "E",
+      "question_prompt": "As shown in the figure, what is the top view of the solid?",
+      "solution": "D",
+      "raw_response": [
+        "The top view of the solid is option A. It shows the correct arrangement of the blocks as seen from above."
+      ],
+      "extracted_response": [
+        "A"
+      ],
+      "normalized_pred": [
+        "A"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 30,
+      "img_id": "30.jpg",
+      "category": "3D Visualization / Cubes & Dice / Three views",
+      "question": "As shown in the figure, the solid is composed of several identical small cubes. What is its left view?",
+      "answer": "B",
+      "level": "E",
+      "question_prompt": "As shown in the figure, the solid is composed of several identical small cubes. What is its left view?",
+      "solution": "B",
+      "raw_response": [
+        "The left view of the solid is option B. It shows the arrangement of cubes as seen from the left side, with two cubes on the bottom and one cube on top."
+      ],
+      "extracted_response": [
+        "B"
+      ],
+      "normalized_pred": [
+        "B"
+      ],
+      "true_false": [
+        true
+      ],
+      "average_score": 1.0
+    },
+    {
+      "id": 31,
+      "img_id": "31.jpg",
+      "category": "3D Visualization / Cubes & Dice / Three views",
+      "question": "As shown in the figure, the solid is composed of eight identical small cubes. What is its front view?",
+      "answer": "C",
+      "level": "E",
+      "question_prompt": "As shown in the figure, the solid is composed of eight identical small cubes. What is its front view?",
+      "solution": "C",
+      "raw_response": [
+        "The front view of the solid is option B. It shows the correct arrangement of cubes as seen from the front."
+      ],
+      "extracted_response": [
+        "B"
+      ],
+      "normalized_pred": [
+        "B"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 32,
+      "img_id": "32.jpg",
+      "category": "3D Visualization / Cubes & Dice / Three views",
+      "question": "Which 3D view corresponds to the three orthographic views shown in the image?",
+      "answer": "C",
+      "level": "E",
+      "question_prompt": "Which 3D view corresponds to the three orthographic views shown in the image?",
+      "solution": "C",
+      "raw_response": [
+        "The 3D view that corresponds to the three orthographic views shown in the image is option C. The orthographic views depict a rectangular base with a circular feature on top, which matches the 3D representation in option C."
+      ],
+      "extracted_response": [
+        "C"
+      ],
+      "normalized_pred": [
+        "C"
+      ],
+      "true_false": [
+        true
+      ],
+      "average_score": 1.0
+    },
+    {
+      "id": 33,
+      "img_id": "33.jpg",
+      "category": "3D Visualization / Cubes & Dice / Three views",
+      "question": "As shown in the figure, what is the top view of the solid?",
+      "answer": "C",
+      "level": "E",
+      "question_prompt": "As shown in the figure, what is the top view of the solid?",
+      "solution": "C",
+      "raw_response": [
+        "The top view of the solid is option B. \n\nIn the top view, you would see the arrangement of the blocks from above, which would show a \"T\" shape with three blocks in a row and one block on top of the middle block."
+      ],
+      "extracted_response": [
+        "B"
+      ],
+      "normalized_pred": [
+        "B"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 34,
+      "img_id": "34.jpg",
+      "category": "3D Visualization / Cubes & Dice / Three views",
+      "question": "The figure shows a commonly used round-head screw. Which of the following is its correct top view?",
+      "answer": "B",
+      "level": "E",
+      "question_prompt": "The figure shows a commonly used round-head screw. Which of the following is its correct top view?",
+      "solution": "B",
+      "raw_response": [
+        "The correct top view of the round-head screw is option B."
+      ],
+      "extracted_response": [
+        "B"
+      ],
+      "normalized_pred": [
+        "B"
+      ],
+      "true_false": [
+        true
+      ],
+      "average_score": 1.0
+    },
+    {
+      "id": 35,
+      "img_id": "35.jpg",
+      "category": "3D Visualization / Cubes & Dice / Three views",
+      "question": "A solid is built by stacking small cubes of equal size. The shape of the solid viewed from above is shown in the figure, where the number in each square indicates how many cubes are stacked at that position. What is the shape of the solid when viewed from the front?",
+      "answer": "D",
+      "level": "E",
+      "question_prompt": "A solid is built by stacking small cubes of equal size. The shape of the solid viewed from above is shown in the figure, where the number in each square indicates how many cubes are stacked at that position. What is the shape of the solid when viewed from the front?",
+      "solution": "D",
+      "raw_response": [
+        "To determine the shape of the solid when viewed from the front, we need to consider the number of cubes stacked in each column from the front view.\n\nThe top view shows:\n\n- First column: 2 cubes\n- Second column: 3 cubes\n- Third column: 1 cube\n- Fourth column: 2 cubes\n- Fifth column: 3 cubes\n\nWhen viewed from the front, the shape will show the maximum height of cubes in each column from left to right. Therefore, the front view will have:\n\n- First column: 2 cubes\n- Second column: 3 cubes\n- Third column: 1 cube\n- Fourth column: 2 cubes\n- Fifth column: 3 cubes\n\nThis corresponds to option **A**."
+      ],
+      "extracted_response": [
+        "A"
+      ],
+      "normalized_pred": [
+        "A"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 36,
+      "img_id": "36.jpg",
+      "category": "3D Visualization / Cubes & Dice / Three views",
+      "question": "What is the shape of the object as seen from the right side?",
+      "answer": "A",
+      "level": "E",
+      "question_prompt": "What is the shape of the object as seen from the right side?",
+      "solution": "A",
+      "raw_response": [
+        "The shape of the object as seen from the right side corresponds to option C."
+      ],
+      "extracted_response": [
+        "C"
+      ],
+      "normalized_pred": [
+        "C"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 37,
+      "img_id": "37.jpg",
+      "category": "3D Visualization / Cubes & Dice / Three views",
+      "question": "A solid is composed of four identical cubes as shown in the figure. What is its top view?",
+      "answer": "B",
+      "level": "E",
+      "question_prompt": "A solid is composed of four identical cubes as shown in the figure. What is its top view?",
+      "solution": "B",
+      "raw_response": [
+        "The top view of the solid composed of four identical cubes, as shown in the figure, would be option C. This view shows the arrangement of the cubes from above, where the topmost cube is centered on the three cubes below it."
+      ],
+      "extracted_response": [
+        "C"
+      ],
+      "normalized_pred": [
+        "C"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 38,
+      "img_id": "38.jpg",
+      "category": "3D Visualization / Cubes & Dice / Three views",
+      "question": "Among the four solids below, which one has a front view that is different from the front views of the others?",
+      "answer": "C",
+      "level": "E",
+      "question_prompt": "Among the four solids below, which one has a front view that is different from the front views of the others?",
+      "solution": "C",
+      "raw_response": [
+        "The solid with a front view that is different from the others is C. The pyramid has a triangular front view, while the others have rectangular or circular front views."
+      ],
+      "extracted_response": [
+        "C"
+      ],
+      "normalized_pred": [
+        "C"
+      ],
+      "true_false": [
+        true
+      ],
+      "average_score": 1.0
+    },
+    {
+      "id": 39,
+      "img_id": "39.jpg",
+      "category": "3D Visualization / Cubes & Dice / Three views",
+      "question": "What is the top view of the solid shown in the figure?",
+      "answer": "B",
+      "level": "E",
+      "question_prompt": "What is the top view of the solid shown in the figure?",
+      "solution": "B",
+      "raw_response": [
+        "The solid in the figure is a triangular pyramid. The top view of a triangular pyramid would be a triangle. Therefore, the correct answer is A."
+      ],
+      "extracted_response": [
+        "A"
+      ],
+      "normalized_pred": [
+        "A"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 40,
+      "img_id": "40.jpg",
+      "category": "3D Visualization / Cubes & Dice / Three views",
+      "question": "The three orthographic views of a solid are shown in the figure. Which of the following is the corresponding 3D shape?",
+      "answer": "A",
+      "level": "M",
+      "question_prompt": "The three orthographic views of a solid are shown in the figure. Which of the following is the corresponding 3D shape?",
+      "solution": "A",
+      "raw_response": [
+        "The orthographic views show a shape with a triangular base and rectangular sides. The corresponding 3D shape is a triangular prism, which matches option A."
+      ],
+      "extracted_response": [
+        "A"
+      ],
+      "normalized_pred": [
+        "A"
+      ],
+      "true_false": [
+        true
+      ],
+      "average_score": 1.0
+    },
+    {
+      "id": 41,
+      "img_id": "41.jpg",
+      "category": "3D Visualization / Cubes & Dice / Three views",
+      "question": "What is the front view of the solid shown in the figure below?",
+      "answer": "A",
+      "level": "E",
+      "question_prompt": "What is the front view of the solid shown in the figure below?",
+      "solution": "A",
+      "raw_response": [
+        "The front view of the solid shown in the figure is option B."
+      ],
+      "extracted_response": [
+        "B"
+      ],
+      "normalized_pred": [
+        "B"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 42,
+      "img_id": "42.jpg",
+      "category": "3D Visualization / Cubes & Dice / Three views",
+      "question": "As shown in the figure, a part of the top of a cylinder is cut off along a straight line. What is its top view?",
+      "answer": "D",
+      "level": "E",
+      "question_prompt": "As shown in the figure, a part of the top of a cylinder is cut off along a straight line. What is its top view?",
+      "solution": "D",
+      "raw_response": [
+        "The top view of the cylinder with a part cut off along a straight line would be option A. It shows a circle with a straight line cutting off a segment, matching the shape of the cut on the cylinder."
+      ],
+      "extracted_response": [
+        "A"
+      ],
+      "normalized_pred": [
+        "A"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 43,
+      "img_id": "43.jpg",
+      "category": "3D Visualization / Cubes & Dice / Three views",
+      "question": "As shown in the figure, which of the following solids placed horizontally does not have a rectangular front view?",
+      "answer": "B",
+      "level": "E",
+      "question_prompt": "As shown in the figure, which of the following solids placed horizontally does not have a rectangular front view?",
+      "solution": "B",
+      "raw_response": [
+        "The solid that does not have a rectangular front view when placed horizontally is B, the cone."
+      ],
+      "extracted_response": [
+        "B"
+      ],
+      "normalized_pred": [
+        "B"
+      ],
+      "true_false": [
+        true
+      ],
+      "average_score": 1.0
+    },
+    {
+      "id": 44,
+      "img_id": "44.jpg",
+      "category": "3D Visualization / Cubes & Dice / Three views",
+      "question": "As shown in Figure (1), a cylinder is placed. What is its left view?",
+      "answer": "C",
+      "level": "E",
+      "question_prompt": "As shown in Figure (1), a cylinder is placed. What is its left view?",
+      "solution": "C",
+      "raw_response": [
+        "The left view of the cylinder in Figure (1) would be a circle, which corresponds to option C."
+      ],
+      "extracted_response": [
+        "C"
+      ],
+      "normalized_pred": [
+        "C"
+      ],
+      "true_false": [
+        true
+      ],
+      "average_score": 1.0
+    },
+    {
+      "id": 45,
+      "img_id": "45.jpg",
+      "category": "3D Visualization / Cubes & Dice / Three views",
+      "question": "As shown in Figure (1), it is a schematic diagram of a round table lamp. Its top view corresponds to which of the options shown in Figure (2)?",
+      "answer": "D",
+      "level": "E",
+      "question_prompt": "As shown in Figure (1), it is a schematic diagram of a round table lamp. Its top view corresponds to which of the options shown in Figure (2)?",
+      "solution": "D",
+      "raw_response": [
+        "The top view of the round table lamp in Figure (1) would correspond to option D in Figure (2). This is because the lamp has a circular top and a circular base, which would appear as concentric circles from a top view."
+      ],
+      "extracted_response": [
+        "D"
+      ],
+      "normalized_pred": [
+        "D"
+      ],
+      "true_false": [
+        true
+      ],
+      "average_score": 1.0
+    },
+    {
+      "id": 46,
+      "img_id": "46.jpg",
+      "category": "3D Visualization / Cubes & Dice / Three views",
+      "question": "Which of the following solids has front, left, and top views that are exactly the same, as shown in the figure?",
+      "answer": "D",
+      "level": "E",
+      "question_prompt": "Which of the following solids has front, left, and top views that are exactly the same, as shown in the figure?",
+      "solution": "D",
+      "raw_response": [
+        "The solid that has front, left, and top views that are exactly the same is the cylinder, labeled as C."
+      ],
+      "extracted_response": [
+        "C"
+      ],
+      "normalized_pred": [
+        "C"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 47,
+      "img_id": "47.jpg",
+      "category": "3D Visualization / Cubes & Dice / Three views",
+      "question": "Among the four solids shown in the figure, which one has a front view that is different from the front views of the others?",
+      "answer": "C",
+      "level": "E",
+      "question_prompt": "Among the four solids shown in the figure, which one has a front view that is different from the front views of the others?",
+      "solution": "C",
+      "raw_response": [
+        "The solid with a front view that is different from the others is C, the pyramid. The other shapes (A, B, and D) have a rectangular or circular front view, while the pyramid has a triangular front view."
+      ],
+      "extracted_response": [
+        "C"
+      ],
+      "normalized_pred": [
+        "C"
+      ],
+      "true_false": [
+        true
+      ],
+      "average_score": 1.0
+    },
+    {
+      "id": 48,
+      "img_id": "48.jpg",
+      "category": "3D Visualization / Cubes & Dice / Three views",
+      "question": "Among the following solids, which one has a rectangular front view?",
+      "answer": "B",
+      "level": "E",
+      "question_prompt": "Among the following solids, which one has a rectangular front view?",
+      "solution": "B",
+      "raw_response": [
+        "The solid with a rectangular front view is B, the cylinder."
+      ],
+      "extracted_response": [
+        "B"
+      ],
+      "normalized_pred": [
+        "B"
+      ],
+      "true_false": [
+        true
+      ],
+      "average_score": 1.0
+    },
+    {
+      "id": 49,
+      "img_id": "49.jpg",
+      "category": "3D Visualization / Cubes & Dice / Three views",
+      "question": "Observe the three orthographic views shown. Which of the following objects corresponds to them?",
+      "answer": "D",
+      "level": "M",
+      "question_prompt": "Observe the three orthographic views shown. Which of the following objects corresponds to them?",
+      "solution": "D",
+      "raw_response": [
+        "The orthographic views show a front view with a T-shaped cutout at the bottom, a left view with two vertical lines, and a top view with a rectangular shape.\n\nThe object that corresponds to these views is **C**. It has the T-shaped cutout visible in the front view and matches the other views as well."
+      ],
+      "extracted_response": [
+        "C"
+      ],
+      "normalized_pred": [
+        "C"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 50,
+      "img_id": "50.jpg",
+      "category": "3D Visualization / Cubes & Dice / Three views",
+      "question": "A solid is built with seven identical cubes as shown. What is its left view?  ",
+      "answer": "B",
+      "level": "E",
+      "question_prompt": "A solid is built with seven identical cubes as shown. What is its left view?  ",
+      "solution": "B",
+      "raw_response": [
+        "The left view of the solid is option B. It shows the two cubes stacked vertically on the left and the two cubes forming an \"L\" shape on the right."
+      ],
+      "extracted_response": [
+        "B"
+      ],
+      "normalized_pred": [
+        "B"
+      ],
+      "true_false": [
+        true
+      ],
+      "average_score": 1.0
+    },
+    {
+      "id": 51,
+      "img_id": "51.jpg",
+      "category": "3D Visualization / Cubes & Dice / Three views",
+      "question": "A solid is built with 5 identical small cubes. What is its top view?",
+      "answer": "D",
+      "level": "E",
+      "question_prompt": "A solid is built with 5 identical small cubes. What is its top view?",
+      "solution": "D",
+      "raw_response": [
+        "The top view of the solid is option **A**. \n\nFrom the top, you would see a straight line of three cubes, with one cube extending to the side, forming an \"L\" shape."
+      ],
+      "extracted_response": [
+        "A"
+      ],
+      "normalized_pred": [
+        "A"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 52,
+      "img_id": "52.jpg",
+      "category": "3D Visualization / Cubes & Dice / Three views",
+      "question": "Among the following solids, which one does **not** have a rectangular left view?",
+      "answer": "B",
+      "level": "E",
+      "question_prompt": "Among the following solids, which one does **not** have a rectangular left view?",
+      "solution": "B",
+      "raw_response": [
+        "The solid that does not have a rectangular left view is B. This is a triangular pyramid (tetrahedron), which has triangular faces."
+      ],
+      "extracted_response": [
+        "B"
+      ],
+      "normalized_pred": [
+        "B"
+      ],
+      "true_false": [
+        true
+      ],
+      "average_score": 1.0
+    },
+    {
+      "id": 53,
+      "img_id": "53.jpg",
+      "category": "3D Visualization / Cubes & Dice / Three views",
+      "question": "As shown, a 3D object is composed of five identical small cubes. What is its left view?",
+      "answer": "A",
+      "level": "E",
+      "question_prompt": "As shown, a 3D object is composed of five identical small cubes. What is its left view?",
+      "solution": "A",
+      "raw_response": [
+        "The left view of the 3D object is option C. It shows two cubes on the left and right with a gap in the middle, matching the structure of the object when viewed from the left side."
+      ],
+      "extracted_response": [
+        "C"
+      ],
+      "normalized_pred": [
+        "C"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 54,
+      "img_id": "54.jpg",
+      "category": "3D Visualization / Cubes & Dice / Three views",
+      "question": "Among the following solids, which one has a rectangular front view?",
+      "answer": "A",
+      "level": "E",
+      "question_prompt": "Among the following solids, which one has a rectangular front view?",
+      "solution": "A",
+      "raw_response": [
+        "The solid with a rectangular front view is A, the cylinder."
+      ],
+      "extracted_response": [
+        "A"
+      ],
+      "normalized_pred": [
+        "A"
+      ],
+      "true_false": [
+        true
+      ],
+      "average_score": 1.0
+    },
+    {
+      "id": 55,
+      "img_id": "55.jpg",
+      "category": "Series Completion (Image Sequences)",
+      "question": "Please choose the most appropriate option from the four given to fill in the question mark so that a certain pattern is formed.",
+      "answer": "A",
+      "level": "H",
+      "question_prompt": "Please choose the most appropriate option from the four given to fill in the question mark so that a certain pattern is formed.",
+      "solution": "A",
+      "raw_response": [
+        "The pattern in the sequence involves rotating the shape 90 degrees clockwise with each step. \n\nFollowing this pattern, the shape that fits in the question mark should be option C."
+      ],
+      "extracted_response": [
+        "C"
+      ],
+      "normalized_pred": [
+        "C"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 56,
+      "img_id": "56.jpg",
+      "category": "3D Visualization / Cubes & Dice / Three views",
+      "question": "The left figure shows a given polyhedron. Viewed from any angle, which of the following is not a possible view of the polyhedron?",
+      "answer": "C",
+      "level": "H",
+      "question_prompt": "The left figure shows a given polyhedron. Viewed from any angle, which of the following is not a possible view of the polyhedron?",
+      "solution": "C",
+      "raw_response": [
+        "The view that is not possible is option **D**. \n\nIn the given polyhedron, there is a slanted surface that is not represented in option D, which shows only vertical and horizontal lines."
+      ],
+      "extracted_response": [
+        "D"
+      ],
+      "normalized_pred": [
+        "D"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 57,
+      "img_id": "57.jpg",
+      "category": "3D Visualization / Cubes & Dice / Three views",
+      "question": "The left figure shows a given solid. If it is sliced from any surface, which of the following could be a cross-section of the solid?",
+      "answer": "C",
+      "level": "M",
+      "question_prompt": "The left figure shows a given solid. If it is sliced from any surface, which of the following could be a cross-section of the solid?",
+      "solution": "C",
+      "raw_response": [
+        "The cross-section of the given solid could be option C. The solid has a cylindrical part and a rectangular part, and slicing it could result in an L-shaped cross-section."
+      ],
+      "extracted_response": [
+        "C"
+      ],
+      "normalized_pred": [
+        "C"
+      ],
+      "true_false": [
+        true
+      ],
+      "average_score": 1.0
+    },
+    {
+      "id": 58,
+      "img_id": "58.jpg",
+      "category": "3D Visualization / Cubes & Dice / Three views",
+      "question": "The left figure is a polyhedron made up of 15 white cubes and 3 gray cubes. It can be formed by combining polyhedra ①, ②, and ③. Which option can be used to fill in the question mark?",
+      "answer": "A",
+      "level": "H",
+      "question_prompt": "The left figure is a polyhedron made up of 15 white cubes and 3 gray cubes. It can be formed by combining polyhedra ①, ②, and ③. Which option can be used to fill in the question mark?",
+      "solution": "A",
+      "raw_response": [
+        "To solve this, we need to determine which option can be combined with the shapes in ① and ② to form the shape on the left.\n\n1. **Shape ①**: Consists of 7 white cubes.\n2. **Shape ②**: Consists of 6 white cubes and 1 gray cube.\n\nThe original shape has 15 white cubes and 3 gray cubes. So, the missing shape (③) must have 2 white cubes and 2 gray cubes.\n\n- **Option A**: Has 3 white cubes and 1 gray cube.\n- **Option B**: Has 2 white cubes and 2 gray cubes.\n- **Option C**: Has 3 white cubes and 1 gray cube.\n- **Option D**: Has 2 white cubes and 1 gray cube.\n\nOption B matches the requirement of having 2 white cubes and 2 gray cubes.\n\nTherefore, the correct answer is **B**."
+      ],
+      "extracted_response": [
+        "B"
+      ],
+      "normalized_pred": [
+        "B"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 59,
+      "img_id": "59.jpg",
+      "category": "3D Visualization / Cubes & Dice / Three views",
+      "question": "Which of the following tenon-and-mortise structures can correctly connect with part 1 shown below?",
+      "answer": "C",
+      "level": "H",
+      "question_prompt": "Which of the following tenon-and-mortise structures can correctly connect with part 1 shown below?",
+      "solution": "C",
+      "raw_response": [
+        "The correct tenon-and-mortise structure that can connect with part 1 is option C. The shape of the tenon in option C matches the mortise in part 1."
+      ],
+      "extracted_response": [
+        "C"
+      ],
+      "normalized_pred": [
+        "C"
+      ],
+      "true_false": [
+        true
+      ],
+      "average_score": 1.0
+    },
+    {
+      "id": 60,
+      "img_id": "60.jpg",
+      "category": "Folding / Three-dimensional figure expansion diagram",
+      "question": "The figure below shows the outer surface of a cube-shaped paper box. Which of the following can be folded into it?",
+      "answer": "D",
+      "level": "H",
+      "question_prompt": "The figure below shows the outer surface of a cube-shaped paper box. Which of the following can be folded into it?",
+      "solution": "D",
+      "raw_response": [
+        "To determine which option can be folded into the cube, we need to visualize how the net folds into a 3D shape.\n\nThe net has six faces, each divided into triangles with specific black and white patterns. When folded, adjacent faces on the net will become adjacent faces on the cube.\n\nBy examining the patterns and their positions:\n\n- Option A matches the pattern when the net is folded into a cube. The black and white triangles align correctly with the adjacent faces.\n\nTherefore, the correct answer is **A**."
+      ],
+      "extracted_response": [
+        "A"
+      ],
+      "normalized_pred": [
+        "A"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 61,
+      "img_id": "61.jpg",
+      "category": "Folding / Three-dimensional figure expansion diagram",
+      "question": "The figure on the left shows the outer surface of a cube-shaped paper box. Which of the following can be folded into it?",
+      "answer": "D",
+      "level": "H",
+      "question_prompt": "The figure on the left shows the outer surface of a cube-shaped paper box. Which of the following can be folded into it?",
+      "solution": "D",
+      "raw_response": [
+        "To determine which option can be folded into the cube, examine the net and visualize how it folds. The key is to match the patterns on the faces.\n\n- The net has a diagonal pattern that should align when folded.\n- The two triangular patterns should meet at the edges.\n\nOption C is the correct choice. It shows the correct alignment of the patterns when the net is folded into a cube."
+      ],
+      "extracted_response": [
+        "C"
+      ],
+      "normalized_pred": [
+        "C"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 62,
+      "img_id": "62.jpg",
+      "category": "Folding / Three-dimensional figure expansion diagram",
+      "question": "The figure on the left shows the outer surface of a cube-shaped paper box. Which of the following can be folded into it?",
+      "answer": "D",
+      "level": "M",
+      "question_prompt": "The figure on the left shows the outer surface of a cube-shaped paper box. Which of the following can be folded into it?",
+      "solution": "D",
+      "raw_response": [
+        "To determine which option can be folded into the cube, we need to match the patterns on the net with the patterns on the cube options.\n\nThe net has:\n- A black square.\n- A black oval.\n- Triangular patterns.\n\nOption C matches the net:\n- The black square and oval are positioned correctly.\n- The triangular patterns align with the net.\n\nTherefore, option C can be folded into the cube."
+      ],
+      "extracted_response": [
+        "C"
+      ],
+      "normalized_pred": [
+        "C"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 63,
+      "img_id": "63.jpg",
+      "category": "Folding / Three-dimensional figure expansion diagram",
+      "question": "The figure on the left shows the outer surface of a cube-shaped paper box. Which of the following can be folded into it?",
+      "answer": "A",
+      "level": "H",
+      "question_prompt": "The figure on the left shows the outer surface of a cube-shaped paper box. Which of the following can be folded into it?",
+      "solution": "A",
+      "raw_response": [
+        "To determine which option can be folded into the cube, we need to visualize how the net folds into a 3D shape. \n\nThe net on the left has a specific arrangement of shaded and unshaded triangles and rectangles. When folded, the shaded triangles should meet to form a continuous pattern on the cube.\n\nOption B is the correct choice. It shows the correct arrangement of shaded and unshaded areas that match the net when folded into a cube."
+      ],
+      "extracted_response": [
+        "B"
+      ],
+      "normalized_pred": [
+        "B"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 64,
+      "img_id": "64.jpg",
+      "category": "Folding / Three-dimensional figure expansion diagram",
+      "question": "The figure on the left shows the outer surface of a cube-shaped paper box. Which of the following can be folded into it?",
+      "answer": "C",
+      "level": "H",
+      "question_prompt": "The figure on the left shows the outer surface of a cube-shaped paper box. Which of the following can be folded into it?",
+      "solution": "C",
+      "raw_response": [
+        "To determine which option can be folded into the cube, we need to analyze the net on the left and see how it corresponds to the options A, B, C, and D.\n\nThe net has the following faces:\n- A face with a rectangle.\n- A face with a circle.\n- A face with a square.\n- Two faces with diagonal crosses.\n- A face with a square and a rectangle inside.\n\nWhen folded into a cube:\n- The face with the rectangle and the face with the circle cannot be adjacent.\n- The two faces with diagonal crosses will be opposite each other.\n\nOption C is the correct choice because:\n- The face with the rectangle and the face with the circle are not adjacent.\n- The two faces with diagonal crosses are opposite each other.\n\nTherefore, option C can be folded into the cube."
+      ],
+      "extracted_response": [
+        "C"
+      ],
+      "normalized_pred": [
+        "C"
+      ],
+      "true_false": [
+        true
+      ],
+      "average_score": 1.0
+    },
+    {
+      "id": 65,
+      "img_id": "65.jpg",
+      "category": "Folding / Three-dimensional figure expansion diagram",
+      "question": "The figure on the left shows the outer surface of a cube-shaped paper box. Which of the following can be folded into it?",
+      "answer": "A",
+      "level": "H",
+      "question_prompt": "The figure on the left shows the outer surface of a cube-shaped paper box. Which of the following can be folded into it?",
+      "solution": "A",
+      "raw_response": [
+        "To determine which option can be folded into the cube shown on the left, we need to check the arrangement of the numbers on the dice.\n\nThe key is to ensure that opposite faces on the unfolded pattern do not appear adjacent on the folded cube. In a standard die, opposite faces add up to 7:\n\n- 1 is opposite 6\n- 2 is opposite 5\n- 3 is opposite 4\n\nLooking at the unfolded pattern:\n\n- The face with 1 dot is opposite the face with 6 dots.\n- The face with 2 dots is opposite the face with 5 dots.\n- The face with 3 dots is opposite the face with 4 dots.\n\nNow, let's examine the options:\n\n- **Option A**: The faces with 1 and 6 dots are adjacent, which is incorrect.\n- **Option B**: The faces with 1 and 6 dots are opposite, which is correct.\n- **Option C**: The faces with 1 and 6 dots are adjacent, which is incorrect.\n- **Option D**: The faces with 1 and 6 dots are adjacent, which is incorrect.\n\nTherefore, the correct option is **B**."
+      ],
+      "extracted_response": [
+        "B"
+      ],
+      "normalized_pred": [
+        "B"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 66,
+      "img_id": "66.jpg",
+      "category": "Folding / Three-dimensional figure expansion diagram",
+      "question": "The figure below shows a folded cube-shaped paper box. Which option matches its unfolded outer surface?",
+      "answer": "C",
+      "level": "H",
+      "question_prompt": "The figure below shows a folded cube-shaped paper box. Which option matches its unfolded outer surface?",
+      "solution": "C",
+      "raw_response": [
+        "To solve this, we need to determine which unfolded pattern matches the folded cube shown in the top row.\n\n1. **Cube Analysis:**\n   - The first face has a star with a circle.\n   - The second face has a smiley face.\n   - The third face has a star with a black triangle.\n\n2. **Unfolded Pattern Analysis:**\n   - We need to find a pattern that includes all these elements in a way that they could be folded into the cube shown.\n\n3. **Option Analysis:**\n   - **Option A:** Contains a star with a circle, a smiley face, and a star with a black triangle, all in positions that could fold into the cube.\n   - **Option B:** Does not have the correct arrangement of elements.\n   - **Option C:** Does not have the correct arrangement of elements.\n   - **Option D:** Does not have the correct arrangement of elements.\n\nThe correct answer is **Option A**."
+      ],
+      "extracted_response": [
+        "A"
+      ],
+      "normalized_pred": [
+        "A"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 67,
+      "img_id": "67.jpg",
+      "category": "Folding / Three-dimensional figure expansion diagram",
+      "question": "Which of the options on the right cannot be the unfolded form of the cube-shaped paper box on the left?",
+      "answer": "D",
+      "level": "H",
+      "question_prompt": "Which of the options on the right cannot be the unfolded form of the cube-shaped paper box on the left?",
+      "solution": "D",
+      "raw_response": [
+        "To determine which option cannot be the unfolded form of the cube, we need to analyze the patterns and their positions.\n\nThe cube has:\n- An oval on one face.\n- Triangular patterns on the adjacent faces.\n\nLet's examine each option:\n\n- **A**: The oval is surrounded by triangular patterns, which matches the cube.\n- **B**: The oval is surrounded by triangular patterns, which matches the cube.\n- **C**: The oval is surrounded by triangular patterns, which matches the cube.\n- **D**: The oval is not surrounded by triangular patterns on all sides, which does not match the cube.\n\nTherefore, option **D** cannot be the unfolded form of the cube."
+      ],
+      "extracted_response": [
+        "D"
+      ],
+      "normalized_pred": [
+        "D"
+      ],
+      "true_false": [
+        true
+      ],
+      "average_score": 1.0
+    },
+    {
+      "id": 68,
+      "img_id": "68.jpg",
+      "category": "Folding / Three-dimensional figure expansion diagram",
+      "question": "The figure on the left shows the outer surface of a cube-shaped paper box. Which option on the right can be folded into it?",
+      "answer": "C",
+      "level": "H",
+      "question_prompt": "The figure on the left shows the outer surface of a cube-shaped paper box. Which option on the right can be folded into it?",
+      "solution": "C",
+      "raw_response": [
+        "To determine which option can be folded into the cube, we need to analyze the pattern of the unfolded cube (net) on the left and match it with the options.\n\nThe net has:\n- A triangular top with a dot.\n- A square face with a dot.\n- A square face with no dot.\n- A square face with a dot.\n- A square face with no dot.\n- A triangular bottom with no dot.\n\nOption C matches this pattern:\n- The triangular top and bottom align with the net.\n- The square faces with dots and without dots are positioned correctly.\n\nTherefore, option C can be folded into the cube."
+      ],
+      "extracted_response": [
+        "C"
+      ],
+      "normalized_pred": [
+        "C"
+      ],
+      "true_false": [
+        true
+      ],
+      "average_score": 1.0
+    },
+    {
+      "id": 69,
+      "img_id": "69.jpg",
+      "category": "Folding / Three-dimensional figure expansion diagram",
+      "question": "The figure on the left shows the unfolded surface of a cube-shaped paper box. Which option on the right can be folded into it?",
+      "answer": "B",
+      "level": "H",
+      "question_prompt": "The figure on the left shows the unfolded surface of a cube-shaped paper box. Which option on the right can be folded into it?",
+      "solution": "B",
+      "raw_response": [
+        "To determine which option can be folded into the cube, we need to visualize how the net on the left would fold into a 3D shape.\n\nThe net consists of six squares, and when folded, each square will form one face of the cube. The key is to match the shaded and unshaded areas correctly.\n\n- The top square in the net is white.\n- The middle square is divided into two triangles, one white and one black.\n- The bottom square is black.\n\nWhen folded, the black triangle and the black square should be adjacent, forming a continuous black surface.\n\nOption A shows a continuous black surface with the correct orientation of the black triangle and square, matching the net's layout.\n\nTherefore, option A is the correct choice."
+      ],
+      "extracted_response": [
+        "A"
+      ],
+      "normalized_pred": [
+        "A"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 70,
+      "img_id": "70.jpg",
+      "category": "Folding / Three-dimensional figure expansion diagram",
+      "question": "The figure on the left shows the unfolded surface of a paper box. Which option on the right can be folded into it?",
+      "answer": "C",
+      "level": "H",
+      "question_prompt": "The figure on the left shows the unfolded surface of a paper box. Which option on the right can be folded into it?",
+      "solution": "C",
+      "raw_response": [
+        "To determine which option can be folded into the box, we need to visualize how the unfolded surface will look when assembled.\n\nThe key is to match the patterns and shapes on the unfolded surface with the corresponding faces on the folded options.\n\n- The unfolded surface has a distinct pattern of black and white triangles.\n- Option C matches this pattern when folded, with the black and white triangles aligning correctly.\n\nTherefore, the correct option is C."
+      ],
+      "extracted_response": [
+        "C"
+      ],
+      "normalized_pred": [
+        "C"
+      ],
+      "true_false": [
+        true
+      ],
+      "average_score": 1.0
+    },
+    {
+      "id": 71,
+      "img_id": "71.jpg",
+      "category": "3D Visualization / Cubes & Dice / Three views",
+      "question": "Among the four solid figures below, which one cannot be divided into two identical or mirror-image parts by a single plane?",
+      "answer": "B",
+      "level": "M",
+      "question_prompt": "Among the four solid figures below, which one cannot be divided into two identical or mirror-image parts by a single plane?",
+      "solution": "B",
+      "raw_response": [
+        "To determine which solid figure cannot be divided into two identical or mirror-image parts by a single plane, we need to analyze the symmetry of each figure.\n\n- **Figure A**: This figure can be divided into two identical parts by a vertical plane.\n- **Figure B**: This figure can also be divided into two identical parts by a vertical plane.\n- **Figure C**: This figure can be divided into two identical parts by a horizontal plane.\n- **Figure D**: This figure cannot be divided into two identical or mirror-image parts by a single plane due to its asymmetrical structure.\n\nTherefore, the answer is **Figure D**."
+      ],
+      "extracted_response": [
+        "D"
+      ],
+      "normalized_pred": [
+        "D"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 72,
+      "img_id": "72.jpg",
+      "category": "3D Visualization / Cubes & Dice / Three views",
+      "question": "The left figure shows a given solid. If it is sliced from any surface, which of the following could be a cross-section of the solid?",
+      "answer": "A",
+      "level": "E",
+      "question_prompt": "The left figure shows a given solid. If it is sliced from any surface, which of the following could be a cross-section of the solid?",
+      "solution": "A",
+      "raw_response": [
+        "The given solid is a U-shaped object. If it is sliced from any surface, the cross-section could be a shape that resembles the open part of the \"U\". \n\nOption C, which shows a shape similar to the open part of the \"U\", could be a cross-section of the solid."
+      ],
+      "extracted_response": [
+        "C"
+      ],
+      "normalized_pred": [
+        "C"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 73,
+      "img_id": "73.jpg",
+      "category": "3D Visualization / Cubes & Dice / Three views",
+      "question": "A cube has its top half cut off as shown in the figure. If it is sliced from any surface, which of the following is not a possible cross-section of the polyhedron?",
+      "answer": "C",
+      "level": "M",
+      "question_prompt": "A cube has its top half cut off as shown in the figure. If it is sliced from any surface, which of the following is not a possible cross-section of the polyhedron?",
+      "solution": "C",
+      "raw_response": [
+        "The shape that is not a possible cross-section of the polyhedron is option **C**. \n\nThe other options (A, B, and D) can be formed by slicing the polyhedron at different angles or positions, but option C, which is a triangle, cannot be formed as a cross-section of the given shape."
+      ],
+      "extracted_response": [
+        "C"
+      ],
+      "normalized_pred": [
+        "C"
+      ],
+      "true_false": [
+        true
+      ],
+      "average_score": 1.0
+    },
+    {
+      "id": 74,
+      "img_id": "74.jpg",
+      "category": "3D Visualization / Cubes & Dice / Three views",
+      "question": "The left figure shows a given solid. If it is sliced from any surface, which of the following is not a possible cross-section of the solid?",
+      "answer": "D",
+      "level": "M",
+      "question_prompt": "The left figure shows a given solid. If it is sliced from any surface, which of the following is not a possible cross-section of the solid?",
+      "solution": "D",
+      "raw_response": [
+        "The given solid is an L-shaped prism. \n\n- Option A is a possible cross-section, as it matches the shape of the solid when sliced parallel to its base.\n- Option B is a triangle, which can be a cross-section if the solid is sliced diagonally.\n- Option C is also a triangle, which can occur with a different diagonal slice.\n- Option D is a trapezoid, which is not a possible cross-section of the L-shaped prism, as there is no way to slice the solid to produce a trapezoidal shape.\n\nTherefore, option D is not a possible cross-section of the solid."
+      ],
+      "extracted_response": [
+        "D"
+      ],
+      "normalized_pred": [
+        "D"
+      ],
+      "true_false": [
+        true
+      ],
+      "average_score": 1.0
+    },
+    {
+      "id": 75,
+      "img_id": "75.jpg",
+      "category": "3D Visualization / Cubes & Dice / Three views",
+      "question": "If the solid figure below is sliced from any surface, which of the following is not a possible cross-section of the solid?",
+      "answer": "D",
+      "level": "H",
+      "question_prompt": "If the solid figure below is sliced from any surface, which of the following is not a possible cross-section of the solid?",
+      "solution": "D",
+      "raw_response": [
+        "The cross-section that is not possible is option **B**. The solid figure is a rectangular prism with two rectangular cutouts, so the cross-sections will be combinations of rectangles. Option B shows a shape that cannot be formed by slicing the given solid."
+      ],
+      "extracted_response": [
+        "B"
+      ],
+      "normalized_pred": [
+        "B"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 76,
+      "img_id": "76.jpg",
+      "category": "3D Visualization / Cubes & Dice / Three views",
+      "question": "In the figure below, solid ① is composed of solids ②, ③, and ④. Which of the following cannot be used to fill in the question mark?",
+      "answer": "B",
+      "level": "H",
+      "question_prompt": "In the figure below, solid ① is composed of solids ②, ③, and ④. Which of the following cannot be used to fill in the question mark?",
+      "solution": "B",
+      "raw_response": [
+        "To solve this, we need to determine which option cannot be used to form solid ① when combined with solids ② and ③.\n\n- Solid ① is composed of three parts: ②, ③, and an unknown solid ④.\n- Solid ② is a small block that fits into the bottom right of ①.\n- Solid ③ is a rectangular block that fits into the middle of ①.\n\nWe need to find which option cannot complete the structure of ① when combined with ② and ③.\n\n- Option A: This shape is an L-shaped block, which can fit into the remaining space of ①.\n- Option B: This shape is a two-level block, which can fit into the remaining space of ①.\n- Option C: This shape is a straight block, which can fit into the remaining space of ①.\n- Option D: This shape is a two-block structure that cannot fit into the remaining space of ①.\n\nTherefore, option D cannot be used to fill in the question mark."
+      ],
+      "extracted_response": [
+        "D"
+      ],
+      "normalized_pred": [
+        "D"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 77,
+      "img_id": "77.jpg",
+      "category": "3D Visualization / Cubes & Dice / Three views",
+      "question": "Choose the most appropriate option from the four given to fill in the question mark so that a certain pattern is formed.",
+      "answer": "B",
+      "level": "H",
+      "question_prompt": "Choose the most appropriate option from the four given to fill in the question mark so that a certain pattern is formed.",
+      "solution": "B",
+      "raw_response": [
+        "The pattern in the top row shows a progression from a 2D shape to a 3D shape. The first three shapes are 2D, and the fourth is a 3D cube. The fifth shape is a 3D structure, suggesting a similar transformation.\n\nTo find the correct option, we need to identify a 3D shape that follows the pattern of the previous 3D shape. The fourth shape in the top row is a simple cube, and the fifth shape is a more complex 3D structure.\n\nLooking at the options A, B, C, and D, option C is the most appropriate choice. It follows the complexity and style of the previous 3D shape in the sequence.\n\nTherefore, the answer is option C."
+      ],
+      "extracted_response": [
+        "C"
+      ],
+      "normalized_pred": [
+        "C"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 78,
+      "img_id": "78.jpg",
+      "category": "Folding / Three-dimensional figure expansion diagram",
+      "question": "The figure on the left shows the outer surface of a paper box. Which option on the right is folded from it?",
+      "answer": "A",
+      "level": "M",
+      "question_prompt": "The figure on the left shows the outer surface of a paper box. Which option on the right is folded from it?",
+      "solution": "A",
+      "raw_response": [
+        "The correct option is B. When the net is folded into a cube, the shaded and unshaded triangles align to form the pattern shown in option B."
+      ],
+      "extracted_response": [
+        "B"
+      ],
+      "normalized_pred": [
+        "B"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 79,
+      "img_id": "79.jpg",
+      "category": "Folding / Three-dimensional figure expansion diagram",
+      "question": "The figure below shows the unfolded outer surface of a cube. Which of the following cannot be folded into a cube?",
+      "answer": "C",
+      "level": "H",
+      "question_prompt": "The figure below shows the unfolded outer surface of a cube. Which of the following cannot be folded into a cube?",
+      "solution": "C",
+      "raw_response": [
+        "To determine which option cannot be folded into a cube, we need to analyze the arrangement of the patterns on the unfolded cube and compare them with the options.\n\nThe key is to ensure that adjacent faces in the unfolded pattern do not end up on opposite sides of the cube when folded. \n\nUpon examining the options:\n\n- **Option A**: The arrangement of patterns matches the unfolded cube and can be folded correctly.\n- **Option B**: The arrangement of patterns matches the unfolded cube and can be folded correctly.\n- **Option C**: The arrangement of patterns matches the unfolded cube and can be folded correctly.\n- **Option D**: This option cannot be folded into a cube because the black and white triangles would end up on opposite sides, which is not possible based on the unfolded pattern.\n\nTherefore, the answer is **Option D**."
+      ],
+      "extracted_response": [
+        "D"
+      ],
+      "normalized_pred": [
+        "D"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 80,
+      "img_id": "80.jpg",
+      "category": "3D Visualization / Cubes & Dice / Three views",
+      "question": "The figure on the left shows the outer surface of a paper box. Which option on the right is folded from it?",
+      "answer": "A",
+      "level": "H",
+      "question_prompt": "The figure on the left shows the outer surface of a paper box. Which option on the right is folded from it?",
+      "solution": "A",
+      "raw_response": [
+        "To determine which option can be folded from the given net, we need to visualize how the net folds into a cube.\n\nThe net shows six faces of a cube. When folded, opposite faces must add up to 7 (as is typical with dice):\n\n1. The face with 1 dot is opposite the face with 6 dots.\n2. The face with 2 dots is opposite the face with 5 dots.\n3. The face with 3 dots is opposite the face with 4 dots.\n\nNow, let's examine the options:\n\n- **Option A**: The visible faces are 5, 3, and 4. This configuration is possible because none of these faces are opposite each other.\n- **Option B**: The visible faces are 6, 3, and 5. This configuration is not possible because 6 and 1 are opposite, and 5 and 2 are opposite.\n- **Option C**: The visible faces are 1, 5, and 4. This configuration is possible because none of these faces are opposite each other.\n- **Option D**: The visible faces are 3, 4, and 5. This configuration is not possible because 3 and 4 are opposite each other.\n\nTherefore, the correct options are **A** and **C**."
+      ],
+      "extracted_response": [
+        "[A, C]"
+      ],
+      "normalized_pred": [
+        "[A, C]"
+      ],
+      "true_false": [
+        true
+      ],
+      "average_score": 1.0
+    },
+    {
+      "id": 81,
+      "img_id": "81.jpg",
+      "category": "3D Visualization / Cubes & Dice / Three views",
+      "question": "The figure below shows a given solid. Which of the following options is the unfolded surface of that solid?",
+      "answer": "A",
+      "level": "H",
+      "question_prompt": "The figure below shows a given solid. Which of the following options is the unfolded surface of that solid?",
+      "solution": "A",
+      "raw_response": [
+        "The correct unfolded surface of the given solid is option C."
+      ],
+      "extracted_response": [
+        "C"
+      ],
+      "normalized_pred": [
+        "C"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 82,
+      "img_id": "82.jpg",
+      "category": "3D Visualization / Cubes & Dice / Three views",
+      "question": "The figure below shows a given solid. Which of the following options is the unfolded surface of that solid?",
+      "answer": "C",
+      "level": "H",
+      "question_prompt": "The figure below shows a given solid. Which of the following options is the unfolded surface of that solid?",
+      "solution": "C",
+      "raw_response": [
+        "The correct option is B. \n\nThe unfolded surface (net) of the solid matches the arrangement of faces in option B."
+      ],
+      "extracted_response": [
+        "B"
+      ],
+      "normalized_pred": [
+        "B"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 83,
+      "img_id": "83.jpg",
+      "category": "3D Visualization / Cubes & Dice / Three views",
+      "question": "Which option can be joined with the figure below to form a closed solid?",
+      "answer": "D",
+      "level": "H",
+      "question_prompt": "Which option can be joined with the figure below to form a closed solid?",
+      "solution": "D",
+      "raw_response": [
+        "To form a closed solid, the figure at the top must fit perfectly with one of the options (A, B, C, or D) without any gaps or overlaps. \n\nThe top figure is a straight line of four squares. In option C, there is a space that matches this line of four squares, allowing it to fit perfectly and form a closed solid. \n\nTherefore, the correct option is C."
+      ],
+      "extracted_response": [
+        "C"
+      ],
+      "normalized_pred": [
+        "C"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 84,
+      "img_id": "84.jpg",
+      "category": "3D Visualization / Cubes & Dice / Three views",
+      "question": "A cube has a cone carved out from the middle as shown. If it is sliced from any surface, which of the following is not a possible cross-section of the cube?",
+      "answer": "A",
+      "level": "M",
+      "question_prompt": "A cube has a cone carved out from the middle as shown. If it is sliced from any surface, which of the following is not a possible cross-section of the cube?",
+      "solution": "A",
+      "raw_response": [
+        "The shape that is not a possible cross-section of the cube with a cone carved out is option **A**. \n\nA cross-section of a cone is typically a circle, ellipse, or a triangle, depending on the angle of the cut. An oval shape like in option A is not possible from a straight cut through the cube and cone."
+      ],
+      "extracted_response": [
+        "A"
+      ],
+      "normalized_pred": [
+        "A"
+      ],
+      "true_false": [
+        true
+      ],
+      "average_score": 1.0
+    },
+    {
+      "id": 85,
+      "img_id": "85.jpg",
+      "category": "3D Visualization / Cubes & Dice / Three views",
+      "question": "The following two figures show the front and back views of a polyhedron. Which option is the correct unfolded surface of its exterior?",
+      "answer": "A",
+      "level": "H",
+      "question_prompt": "The following two figures show the front and back views of a polyhedron. Which option is the correct unfolded surface of its exterior?",
+      "solution": "A",
+      "raw_response": [
+        "To determine the correct unfolded surface of the polyhedron, we need to analyze the front and back views and match them with the unfolded options.\n\n1. **Front View Analysis**: \n   - The front view shows a shape with a vertical and horizontal extension, with a shaded top right block.\n\n2. **Back View Analysis**: \n   - The back view shows a similar shape but with the shaded block on the top left.\n\n3. **Matching with Options**:\n   - The correct unfolded surface should have the shaded blocks in positions that match both the front and back views when folded.\n\nOption **C** matches these criteria, as it has the shaded blocks positioned correctly to align with both the front and back views when folded into a 3D shape."
+      ],
+      "extracted_response": [
+        "C"
+      ],
+      "normalized_pred": [
+        "C"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 86,
+      "img_id": "86.jpg",
+      "category": "Folding / Three-dimensional figure expansion diagram",
+      "question": "Among the four options given below, which one can be folded into the shape shown on the left?",
+      "answer": "D",
+      "level": "M",
+      "question_prompt": "Among the four options given below, which one can be folded into the shape shown on the left?",
+      "solution": "D",
+      "raw_response": [
+        "The net on the left can be folded into the cube shown in option C. The pattern of the diagonals on the faces matches when folded into a cube."
+      ],
+      "extracted_response": [
+        "C"
+      ],
+      "normalized_pred": [
+        "C"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 87,
+      "img_id": "87.jpg",
+      "category": "Folding / Three-dimensional figure expansion diagram",
+      "question": "Among the four options given below, which one can be folded into the shape shown on the left?",
+      "answer": "C",
+      "level": "M",
+      "question_prompt": "Among the four options given below, which one can be folded into the shape shown on the left?",
+      "solution": "C",
+      "raw_response": [
+        "The shape on the left can be formed by folding option C. The arrangement of the black and white sections in option C matches the pattern needed to create the 3D shape."
+      ],
+      "extracted_response": [
+        "C"
+      ],
+      "normalized_pred": [
+        "C"
+      ],
+      "true_false": [
+        true
+      ],
+      "average_score": 1.0
+    },
+    {
+      "id": 88,
+      "img_id": "88.jpg",
+      "category": "Folding / Three-dimensional figure expansion diagram",
+      "question": "For the figure on the left, which option could be its folded version?",
+      "answer": "D",
+      "level": "M",
+      "question_prompt": "For the figure on the left, which option could be its folded version?",
+      "solution": "D",
+      "raw_response": [
+        "To determine which option represents the folded version of the cube net on the left, we need to visualize how the net folds into a cube.\n\nThe net consists of six faces:\n- A square\n- An arrow\n- A circle\n- A triangle\n- A blank face\n- Another blank face\n\nWhen folded, opposite faces on the net will not be adjacent on the cube. \n\n- The square and the arrow are opposite each other.\n- The circle and the triangle are opposite each other.\n\nNow, let's analyze the options:\n\n- **Option A**: Shows a triangle and a circle on adjacent faces, which is incorrect because they should be opposite.\n- **Option B**: Shows an arrow and a blank face, which is possible.\n- **Option C**: Shows a circle and a square on adjacent faces, which is incorrect because they should be opposite.\n- **Option D**: Shows a square and a circle on adjacent faces, which is incorrect because they should be opposite.\n\nTherefore, the correct option is **B**."
+      ],
+      "extracted_response": [
+        "B"
+      ],
+      "normalized_pred": [
+        "B"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 89,
+      "img_id": "89.jpg",
+      "category": "Folding / Three-dimensional figure expansion diagram",
+      "question": "For the figure on the left, which option could be its folded version?",
+      "answer": "B",
+      "level": "M",
+      "question_prompt": "For the figure on the left, which option could be its folded version?",
+      "solution": "B",
+      "raw_response": [
+        "To determine which option could be the folded version of the net, we need to consider the positions of the faces relative to each other.\n\nIn the net:\n\n- The circle is opposite the black heart.\n- The triangle is opposite the black circle.\n- The white heart is opposite the black triangle.\n\nNow, let's analyze the options:\n\n- **Option A**: The circle and the white heart are adjacent, which is possible.\n- **Option B**: The black triangle and the white heart are adjacent, which is possible.\n- **Option C**: The black heart and the black circle are adjacent, which is not possible since they are opposite.\n- **Option D**: The black circle and the triangle are adjacent, which is possible.\n\nOptions A, B, and D are possible folded versions of the net."
+      ],
+      "extracted_response": [
+        "A, B, D"
+      ],
+      "normalized_pred": [
+        "A, B, D"
+      ],
+      "true_false": [
+        true
+      ],
+      "average_score": 1.0
+    },
+    {
+      "id": 90,
+      "img_id": "90.jpg",
+      "category": "Folding / Three-dimensional figure expansion diagram",
+      "question": "For the figure on the left, which option could be its folded version?",
+      "answer": "A",
+      "level": "H",
+      "question_prompt": "For the figure on the left, which option could be its folded version?",
+      "solution": "A",
+      "raw_response": [
+        "To determine which option could be the folded version of the net on the left, we need to consider the arrangement of the faces:\n\n1. The net has six faces: a dot, a square, stripes, a blank face, a face with diagonal lines, and a face with a small square.\n\n2. When folded into a cube, opposite faces cannot be adjacent.\n\n- The face with the dot is opposite the face with the small square.\n- The face with stripes is opposite the blank face.\n- The face with diagonal lines is opposite the face with the square.\n\nNow, let's analyze the options:\n\n- **Option A**: The dot and the stripes are adjacent, which is possible.\n- **Option B**: The dot and the small square are adjacent, which is not possible.\n- **Option C**: The dot and the stripes are adjacent, which is possible.\n- **Option D**: The dot and the stripes are adjacent, which is possible.\n\nOptions A, C, and D are possible folded versions of the net. However, Option B is not possible because the dot and the small square are opposite each other and cannot be adjacent."
+      ],
+      "extracted_response": [
+        "A, C, D"
+      ],
+      "normalized_pred": [
+        "A, C, D"
+      ],
+      "true_false": [
+        true
+      ],
+      "average_score": 1.0
+    },
+    {
+      "id": 91,
+      "img_id": "91.jpg",
+      "category": "Folding / Three-dimensional figure expansion diagram",
+      "question": "The left shows the unfolded outer surface of a paper box. Which option on the right can be folded into it? Please find it.",
+      "answer": "A",
+      "level": "H",
+      "question_prompt": "The left shows the unfolded outer surface of a paper box. Which option on the right can be folded into it? Please find it.",
+      "solution": "A",
+      "raw_response": [
+        "To determine which option can be folded into the box shown on the left, we need to match the pattern and arrangement of the shaded and checkered areas.\n\n- The top triangle in the unfolded pattern is shaded.\n- The bottom left triangle has a checkered pattern.\n\nOption C matches this arrangement:\n- It has a checkered pattern on the bottom left triangle.\n- The top triangle is not visible, but the arrangement of the checkered pattern matches the unfolded design.\n\nTherefore, option C is the correct choice."
+      ],
+      "extracted_response": [
+        "C"
+      ],
+      "normalized_pred": [
+        "C"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 92,
+      "img_id": "92.jpg",
+      "category": "Folding / Three-dimensional figure expansion diagram",
+      "question": "The left shows the outer surface of a paper box. Which of the following can be folded into it?",
+      "answer": "A",
+      "level": "H",
+      "question_prompt": "The left shows the outer surface of a paper box. Which of the following can be folded into it?",
+      "solution": "A",
+      "raw_response": [
+        "The correct option is **C**. \n\nWhen folded, the shape in option C matches the layout of the outer surface shown on the left."
+      ],
+      "extracted_response": [
+        "C"
+      ],
+      "normalized_pred": [
+        "C"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 93,
+      "img_id": "93.jpg",
+      "category": "Folding / Three-dimensional figure expansion diagram",
+      "question": "Below is the outer surface of a given paper box. Which of the following boxes can be folded from this surface?",
+      "answer": "A",
+      "level": "H",
+      "question_prompt": "Below is the outer surface of a given paper box. Which of the following boxes can be folded from this surface?",
+      "solution": "A",
+      "raw_response": [
+        "To determine which box can be folded from the given net, we need to analyze the arrangement of the faces:\n\n1. The net has an arrow on one face and a triangle pattern on another.\n2. When folded, opposite faces on the net will not be adjacent on the cube.\n\nLet's evaluate each option:\n\n- **A**: The arrow and triangle are on adjacent faces, which is possible.\n- **B**: The arrow and triangle are on opposite faces, which is not possible.\n- **C**: The arrow and triangle are on adjacent faces, which is possible.\n- **D**: The arrow and triangle are on opposite faces, which is not possible.\n\nTherefore, the boxes that can be folded from the given net are **A** and **C**."
+      ],
+      "extracted_response": [
+        "[A, C]"
+      ],
+      "normalized_pred": [
+        "[A, C]"
+      ],
+      "true_false": [
+        true
+      ],
+      "average_score": 1.0
+    },
+    {
+      "id": 94,
+      "img_id": "94.jpg",
+      "category": "Folding / Three-dimensional figure expansion diagram",
+      "question": "If the six faces of a cube are painted in white, gray, and black such that opposite faces have the same color, which of the following is not a possible unfolded surface of the box?",
+      "answer": "C",
+      "level": "H",
+      "question_prompt": "If the six faces of a cube are painted in white, gray, and black such that opposite faces have the same color, which of the following is not a possible unfolded surface of the box?",
+      "solution": "C",
+      "raw_response": [
+        "To determine which option is not a possible unfolded surface of the cube, we need to ensure that opposite faces have the same color. \n\n- In option A, opposite faces cannot be the same color because the arrangement does not allow for opposite faces to align correctly.\n- In option B, opposite faces can be the same color.\n- In option C, opposite faces can be the same color.\n- In option D, opposite faces can be the same color.\n\nTherefore, option A is not a possible unfolded surface of the cube."
+      ],
+      "extracted_response": [
+        "A"
+      ],
+      "normalized_pred": [
+        "A"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 95,
+      "img_id": "95.jpg",
+      "category": "Folding / Three-dimensional figure expansion diagram",
+      "question": "The left shows the outer surface of a paper box. Which of the following can be folded into it?",
+      "answer": "A",
+      "level": "H",
+      "question_prompt": "The left shows the outer surface of a paper box. Which of the following can be folded into it?",
+      "solution": "A",
+      "raw_response": [
+        "To determine which option can be folded into the box shown on the left, we need to analyze the arrangement of the shaded and unshaded triangles on the net.\n\nThe net has six faces, and we need to match these with the corresponding faces on the folded boxes:\n\n1. The net has a shaded triangle on one face and unshaded triangles on the others.\n2. The shaded triangle is adjacent to two unshaded triangles.\n\nNow, let's examine the options:\n\n- **Option A**: The shaded triangle is on the top face, and the adjacent faces do not match the net's configuration.\n- **Option B**: The shaded triangle is on the side, but the adjacent faces do not match the net's configuration.\n- **Option C**: The shaded triangle is on the side, and the adjacent faces match the net's configuration.\n- **Option D**: The shaded triangle is on the side, but the adjacent faces do not match the net's configuration.\n\nTherefore, the correct option is **C**."
+      ],
+      "extracted_response": [
+        "C"
+      ],
+      "normalized_pred": [
+        "C"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 96,
+      "img_id": "96.jpg",
+      "category": "Series Completion (Image Sequences)",
+      "question": "The left shows the outer surface of a paper box. Which of the following can be folded into it?",
+      "answer": "B",
+      "level": "H",
+      "question_prompt": "The left shows the outer surface of a paper box. Which of the following can be folded into it?",
+      "solution": "B",
+      "raw_response": [
+        "To determine which option can be folded into the shape shown in the top row, we need to analyze the arrangement of shapes and their positions.\n\n1. **Top Row Analysis**:\n   - The first three images show a consistent pattern of shapes on the faces of the polyhedron.\n   - The shapes include a circle, a triangle, and a black dot, each on different faces.\n\n2. **Options Analysis**:\n   - **Option A**: The arrangement of shapes does not match the pattern seen in the top row.\n   - **Option B**: The arrangement of shapes does not match the pattern seen in the top row.\n   - **Option C**: The arrangement of shapes does not match the pattern seen in the top row.\n   - **Option D**: The arrangement of shapes matches the pattern seen in the top row.\n\nTherefore, the correct answer is **Option D**."
+      ],
+      "extracted_response": [
+        "D"
+      ],
+      "normalized_pred": [
+        "D"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 97,
+      "img_id": "97.jpg",
+      "category": "Series Completion (Image Sequences)",
+      "question": "In the figure below, solid ① is composed of solids ②, ③, and ④. Which of the following can be used to fill in the question mark?",
+      "answer": "B",
+      "level": "H",
+      "question_prompt": "In the figure below, solid ① is composed of solids ②, ③, and ④. Which of the following can be used to fill in the question mark?",
+      "solution": "B",
+      "raw_response": [
+        "To solve this, we need to determine which option can combine with the given solids to form solid ①.\n\n- Solid ① is a combination of a cylinder and a cone.\n- Solid ② is a cone.\n- Solid ③ is a cylinder with a base.\n\nWe need a shape that, when combined with solids ② and ③, forms solid ①. \n\nLooking at the options:\n- Option A is a cone inside a cube.\n- Option B is a cone inside a cylinder.\n- Option C is a cone inside a cylinder.\n- Option D is a cube.\n\nSince solid ① is a combination of a cylinder and a cone, option B fits best as it can complete the structure by adding the necessary cylindrical shape to form solid ①.\n\nTherefore, the correct answer is **B**."
+      ],
+      "extracted_response": [
+        "B"
+      ],
+      "normalized_pred": [
+        "B"
+      ],
+      "true_false": [
+        true
+      ],
+      "average_score": 1.0
+    },
+    {
+      "id": 98,
+      "img_id": "98.jpg",
+      "category": "3D Visualization / Cubes & Dice / Three views",
+      "question": "The polyhedron shown below is made up of 20 identical small cubes. Given ① and ②, which of the following solids can be combined with them to form the complete polyhedron?",
+      "answer": "A",
+      "level": "H",
+      "question_prompt": "The polyhedron shown below is made up of 20 identical small cubes. Given ① and ②, which of the following solids can be combined with them to form the complete polyhedron?",
+      "solution": "A",
+      "raw_response": [
+        "To solve this, we need to determine which option (A, B, C, or D) can be combined with the given pieces ① and ② to form the complete polyhedron shown at the top.\n\n1. **Count the cubes in ① and ②:**\n   - ① has 8 cubes.\n   - ② has 4 cubes.\n   - Total cubes in ① and ② = 8 + 4 = 12 cubes.\n\n2. **The complete polyhedron has 20 cubes.**\n   - Cubes needed to complete the polyhedron = 20 - 12 = 8 cubes.\n\n3. **Check the options:**\n   - **A** has 8 cubes.\n   - **B** has 8 cubes.\n   - **C** has 6 cubes.\n   - **D** has 8 cubes.\n\nOptions A, B, and D have 8 cubes, which is the number needed to complete the polyhedron. However, we need to consider the shape and how they fit with ① and ②.\n\nBy visualizing how each option can fit with ① and ② to form the complete shape, option **B** is the correct choice. It can be combined with ① and ② to form the complete polyhedron."
+      ],
+      "extracted_response": [
+        "B"
+      ],
+      "normalized_pred": [
+        "B"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 99,
+      "img_id": "99.jpg",
+      "category": "3D Visualization / Cubes & Dice / Three views",
+      "question": "The left figure shows a given solid. If it is sliced from any surface, which of the following is not a possible cross-section of the solid?",
+      "answer": "C",
+      "level": "E",
+      "question_prompt": "The left figure shows a given solid. If it is sliced from any surface, which of the following is not a possible cross-section of the solid?",
+      "solution": "C",
+      "raw_response": [
+        "The given solid is an L-shaped prism. Let's analyze the possible cross-sections:\n\n- **A**: This is an L-shape, which is possible if the solid is sliced parallel to the base.\n- **B**: This is an inverted triangle, which is not possible as a cross-section of the L-shaped prism.\n- **C**: This is a right triangle, which is possible if the solid is sliced diagonally.\n- **D**: This is a trapezoid, which is possible if the solid is sliced at an angle.\n\nTherefore, the shape that is not a possible cross-section of the solid is **B**."
+      ],
+      "extracted_response": [
+        "B"
+      ],
+      "normalized_pred": [
+        "B"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 100,
+      "img_id": "100.jpg",
+      "category": "Series Completion (Image Sequences)",
+      "question": "Choose the most appropriate option from the four given to fill in the question mark so that a certain pattern is formed.",
+      "answer": "C",
+      "level": "M",
+      "question_prompt": "Choose the most appropriate option from the four given to fill in the question mark so that a certain pattern is formed.",
+      "solution": "C",
+      "raw_response": [
+        "The pattern in the top row shows a 3D object, its unfolded net, and then its top view. The second row follows the same pattern. \n\n- The first image is a 3D object.\n- The second image is the unfolded net of the 3D object.\n- The third image is the top view of the 3D object.\n\nFollowing this pattern, the top view of the 3D object in the second row should be option **C**."
+      ],
+      "extracted_response": [
+        "C"
+      ],
+      "normalized_pred": [
+        "C"
+      ],
+      "true_false": [
+        true
+      ],
+      "average_score": 1.0
+    },
+    {
+      "id": 101,
+      "img_id": "101.jpg",
+      "category": "Figure Rotation",
+      "question": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 315 degrees?",
+      "answer": "C",
+      "level": null,
+      "question_prompt": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 315 degrees?",
+      "solution": "C",
+      "raw_response": [
+        "The original figure rotated clockwise by 315 degrees is option **A**."
+      ],
+      "extracted_response": [
+        "A"
+      ],
+      "normalized_pred": [
+        "A"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 102,
+      "img_id": "102.jpg",
+      "category": "Figure Rotation",
+      "question": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 315 degrees?",
+      "answer": "E",
+      "level": null,
+      "question_prompt": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 315 degrees?",
+      "solution": "E",
+      "raw_response": [
+        "The original figure rotated clockwise by 315 degrees is option B."
+      ],
+      "extracted_response": [
+        "B"
+      ],
+      "normalized_pred": [
+        "B"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 103,
+      "img_id": "103.jpg",
+      "category": "Figure Rotation",
+      "question": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 135 degrees?",
+      "answer": "A",
+      "level": null,
+      "question_prompt": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 135 degrees?",
+      "solution": "A",
+      "raw_response": [
+        "The original figure rotated clockwise by 135 degrees is option B."
+      ],
+      "extracted_response": [
+        "B"
+      ],
+      "normalized_pred": [
+        "B"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 104,
+      "img_id": "104.jpg",
+      "category": "Figure Rotation",
+      "question": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 225 degrees?",
+      "answer": "B",
+      "level": null,
+      "question_prompt": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 225 degrees?",
+      "solution": "B",
+      "raw_response": [
+        "The original figure rotated clockwise by 225 degrees matches option C."
+      ],
+      "extracted_response": [
+        "C"
+      ],
+      "normalized_pred": [
+        "C"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 105,
+      "img_id": "105.jpg",
+      "category": "Figure Rotation",
+      "question": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 225 degrees?",
+      "answer": "C",
+      "level": null,
+      "question_prompt": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 225 degrees?",
+      "solution": "C",
+      "raw_response": [
+        "The original figure rotated clockwise by 225 degrees is option C."
+      ],
+      "extracted_response": [
+        "C"
+      ],
+      "normalized_pred": [
+        "C"
+      ],
+      "true_false": [
+        true
+      ],
+      "average_score": 1.0
+    },
+    {
+      "id": 106,
+      "img_id": "106.jpg",
+      "category": "Figure Rotation",
+      "question": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 270 degrees?",
+      "answer": "E",
+      "level": null,
+      "question_prompt": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 270 degrees?",
+      "solution": "E",
+      "raw_response": [
+        "The original figure rotated clockwise by 270 degrees is option D."
+      ],
+      "extracted_response": [
+        "D"
+      ],
+      "normalized_pred": [
+        "D"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 107,
+      "img_id": "107.jpg",
+      "category": "Figure Rotation",
+      "question": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 180 degrees?",
+      "answer": "C",
+      "level": null,
+      "question_prompt": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 180 degrees?",
+      "solution": "C",
+      "raw_response": [
+        "The original figure rotated clockwise by 180 degrees is option C."
+      ],
+      "extracted_response": [
+        "C"
+      ],
+      "normalized_pred": [
+        "C"
+      ],
+      "true_false": [
+        true
+      ],
+      "average_score": 1.0
+    },
+    {
+      "id": 108,
+      "img_id": "108.jpg",
+      "category": "Figure Rotation",
+      "question": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 225 degrees?",
+      "answer": "C",
+      "level": null,
+      "question_prompt": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 225 degrees?",
+      "solution": "C",
+      "raw_response": [
+        "The original figure rotated clockwise by 225 degrees matches option D."
+      ],
+      "extracted_response": [
+        "D"
+      ],
+      "normalized_pred": [
+        "D"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 109,
+      "img_id": "109.jpg",
+      "category": "Figure Rotation",
+      "question": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 135 degrees?",
+      "answer": "A",
+      "level": null,
+      "question_prompt": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 135 degrees?",
+      "solution": "A",
+      "raw_response": [
+        "The original figure rotated clockwise by 135 degrees matches option D."
+      ],
+      "extracted_response": [
+        "D"
+      ],
+      "normalized_pred": [
+        "D"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 110,
+      "img_id": "110.jpg",
+      "category": "Figure Rotation",
+      "question": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 225 degrees?",
+      "answer": "A",
+      "level": null,
+      "question_prompt": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 225 degrees?",
+      "solution": "A",
+      "raw_response": [
+        "The original figure rotated clockwise by 225 degrees corresponds to option C."
+      ],
+      "extracted_response": [
+        "C"
+      ],
+      "normalized_pred": [
+        "C"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 111,
+      "img_id": "111.jpg",
+      "category": "Figure Rotation",
+      "question": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 270 degrees?",
+      "answer": "D",
+      "level": null,
+      "question_prompt": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 270 degrees?",
+      "solution": "D",
+      "raw_response": [
+        "The original figure rotated clockwise by 270 degrees is option C."
+      ],
+      "extracted_response": [
+        "C"
+      ],
+      "normalized_pred": [
+        "C"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 112,
+      "img_id": "112.jpg",
+      "category": "Figure Rotation",
+      "question": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 45 degrees?",
+      "answer": "C",
+      "level": null,
+      "question_prompt": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 45 degrees?",
+      "solution": "C",
+      "raw_response": [
+        "The original figure rotated clockwise by 45 degrees is option D."
+      ],
+      "extracted_response": [
+        "D"
+      ],
+      "normalized_pred": [
+        "D"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 113,
+      "img_id": "113.jpg",
+      "category": "Figure Rotation",
+      "question": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 45 degrees?",
+      "answer": "D",
+      "level": null,
+      "question_prompt": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 45 degrees?",
+      "solution": "D",
+      "raw_response": [
+        "The original figure, when rotated clockwise by 45 degrees, matches option D."
+      ],
+      "extracted_response": [
+        "D"
+      ],
+      "normalized_pred": [
+        "D"
+      ],
+      "true_false": [
+        true
+      ],
+      "average_score": 1.0
+    },
+    {
+      "id": 114,
+      "img_id": "114.jpg",
+      "category": "Figure Rotation",
+      "question": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 270 degrees?",
+      "answer": "D",
+      "level": null,
+      "question_prompt": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 270 degrees?",
+      "solution": "D",
+      "raw_response": [
+        "The original figure rotated clockwise by 270 degrees is option B."
+      ],
+      "extracted_response": [
+        "B"
+      ],
+      "normalized_pred": [
+        "B"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 115,
+      "img_id": "115.jpg",
+      "category": "Figure Rotation",
+      "question": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 315 degrees?",
+      "answer": "C",
+      "level": null,
+      "question_prompt": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 315 degrees?",
+      "solution": "C",
+      "raw_response": [
+        "The original figure rotated clockwise by 315 degrees is option **C**."
+      ],
+      "extracted_response": [
+        "C"
+      ],
+      "normalized_pred": [
+        "C"
+      ],
+      "true_false": [
+        true
+      ],
+      "average_score": 1.0
+    },
+    {
+      "id": 116,
+      "img_id": "116.jpg",
+      "category": "Figure Rotation",
+      "question": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 180 degrees?",
+      "answer": "C",
+      "level": null,
+      "question_prompt": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 180 degrees?",
+      "solution": "C",
+      "raw_response": [
+        "The original figure rotated clockwise by 180 degrees is option C."
+      ],
+      "extracted_response": [
+        "C"
+      ],
+      "normalized_pred": [
+        "C"
+      ],
+      "true_false": [
+        true
+      ],
+      "average_score": 1.0
+    },
+    {
+      "id": 117,
+      "img_id": "117.jpg",
+      "category": "Figure Rotation",
+      "question": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 135 degrees?",
+      "answer": "C",
+      "level": null,
+      "question_prompt": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 135 degrees?",
+      "solution": "C",
+      "raw_response": [
+        "The original figure rotated clockwise by 135 degrees is option C."
+      ],
+      "extracted_response": [
+        "C"
+      ],
+      "normalized_pred": [
+        "C"
+      ],
+      "true_false": [
+        true
+      ],
+      "average_score": 1.0
+    },
+    {
+      "id": 118,
+      "img_id": "118.jpg",
+      "category": "Figure Rotation",
+      "question": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 90 degrees?",
+      "answer": "C",
+      "level": null,
+      "question_prompt": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 90 degrees?",
+      "solution": "C",
+      "raw_response": [
+        "The original figure (A) rotated clockwise by 90 degrees is option (C)."
+      ],
+      "extracted_response": [
+        "C"
+      ],
+      "normalized_pred": [
+        "C"
+      ],
+      "true_false": [
+        true
+      ],
+      "average_score": 1.0
+    },
+    {
+      "id": 119,
+      "img_id": "119.jpg",
+      "category": "Figure Rotation",
+      "question": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 45 degrees?",
+      "answer": "E",
+      "level": null,
+      "question_prompt": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 45 degrees?",
+      "solution": "E",
+      "raw_response": [
+        "The original figure rotated clockwise by 45 degrees is option C."
+      ],
+      "extracted_response": [
+        "C"
+      ],
+      "normalized_pred": [
+        "C"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 120,
+      "img_id": "120.jpg",
+      "category": "Figure Rotation",
+      "question": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 90 degrees?",
+      "answer": "B",
+      "level": null,
+      "question_prompt": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 90 degrees?",
+      "solution": "B",
+      "raw_response": [
+        "The original figure rotated clockwise by 90 degrees is option D."
+      ],
+      "extracted_response": [
+        "D"
+      ],
+      "normalized_pred": [
+        "D"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 121,
+      "img_id": "121.jpg",
+      "category": "Figure Rotation",
+      "question": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 225 degrees?",
+      "answer": "E",
+      "level": null,
+      "question_prompt": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 225 degrees?",
+      "solution": "E",
+      "raw_response": [
+        "The original figure rotated clockwise by 225 degrees is option D."
+      ],
+      "extracted_response": [
+        "D"
+      ],
+      "normalized_pred": [
+        "D"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 122,
+      "img_id": "122.jpg",
+      "category": "Figure Rotation",
+      "question": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 90 degrees?",
+      "answer": "E",
+      "level": null,
+      "question_prompt": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 90 degrees?",
+      "solution": "E",
+      "raw_response": [
+        "The original figure rotated clockwise by 90 degrees is option D."
+      ],
+      "extracted_response": [
+        "D"
+      ],
+      "normalized_pred": [
+        "D"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 123,
+      "img_id": "123.jpg",
+      "category": "Figure Rotation",
+      "question": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 225 degrees?",
+      "answer": "D",
+      "level": null,
+      "question_prompt": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 225 degrees?",
+      "solution": "D",
+      "raw_response": [
+        "The original figure rotated clockwise by 225 degrees is option C."
+      ],
+      "extracted_response": [
+        "C"
+      ],
+      "normalized_pred": [
+        "C"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 124,
+      "img_id": "124.jpg",
+      "category": "Figure Rotation",
+      "question": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 270 degrees?",
+      "answer": "C",
+      "level": null,
+      "question_prompt": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 270 degrees?",
+      "solution": "C",
+      "raw_response": [
+        "The original figure rotated clockwise by 270 degrees is option C."
+      ],
+      "extracted_response": [
+        "C"
+      ],
+      "normalized_pred": [
+        "C"
+      ],
+      "true_false": [
+        true
+      ],
+      "average_score": 1.0
+    },
+    {
+      "id": 125,
+      "img_id": "125.jpg",
+      "category": "Figure Rotation",
+      "question": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 45 degrees?",
+      "answer": "A",
+      "level": null,
+      "question_prompt": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 45 degrees?",
+      "solution": "A",
+      "raw_response": [
+        "The original figure rotated clockwise by 45 degrees is option C."
+      ],
+      "extracted_response": [
+        "C"
+      ],
+      "normalized_pred": [
+        "C"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 126,
+      "img_id": "126.jpg",
+      "category": "Figure Rotation",
+      "question": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 270 degrees?",
+      "answer": "C",
+      "level": null,
+      "question_prompt": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 270 degrees?",
+      "solution": "C",
+      "raw_response": [
+        "The original figure rotated clockwise by 270 degrees is option B."
+      ],
+      "extracted_response": [
+        "B"
+      ],
+      "normalized_pred": [
+        "B"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 127,
+      "img_id": "127.jpg",
+      "category": "Figure Rotation",
+      "question": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 90 degrees?",
+      "answer": "B",
+      "level": null,
+      "question_prompt": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 90 degrees?",
+      "solution": "B",
+      "raw_response": [
+        "The original figure rotated clockwise by 90 degrees is option C."
+      ],
+      "extracted_response": [
+        "C"
+      ],
+      "normalized_pred": [
+        "C"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 128,
+      "img_id": "128.jpg",
+      "category": "Figure Rotation",
+      "question": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 180 degrees?",
+      "answer": "E",
+      "level": null,
+      "question_prompt": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 180 degrees?",
+      "solution": "E",
+      "raw_response": [
+        "The original figure rotated clockwise by 180 degrees is option E."
+      ],
+      "extracted_response": [
+        "E"
+      ],
+      "normalized_pred": [
+        "E"
+      ],
+      "true_false": [
+        true
+      ],
+      "average_score": 1.0
+    },
+    {
+      "id": 129,
+      "img_id": "129.jpg",
+      "category": "Figure Rotation",
+      "question": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 135 degrees?",
+      "answer": "E",
+      "level": null,
+      "question_prompt": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 135 degrees?",
+      "solution": "E",
+      "raw_response": [
+        "The original figure rotated clockwise by 135 degrees is option **E**."
+      ],
+      "extracted_response": [
+        "E"
+      ],
+      "normalized_pred": [
+        "E"
+      ],
+      "true_false": [
+        true
+      ],
+      "average_score": 1.0
+    },
+    {
+      "id": 130,
+      "img_id": "130.jpg",
+      "category": "Figure Rotation",
+      "question": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 180 degrees?",
+      "answer": "E",
+      "level": null,
+      "question_prompt": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 180 degrees?",
+      "solution": "E",
+      "raw_response": [
+        "The original figure rotated clockwise by 180 degrees is option C."
+      ],
+      "extracted_response": [
+        "C"
+      ],
+      "normalized_pred": [
+        "C"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 131,
+      "img_id": "131.jpg",
+      "category": "Figure Rotation",
+      "question": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 45 degrees?",
+      "answer": "D",
+      "level": null,
+      "question_prompt": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 45 degrees?",
+      "solution": "D",
+      "raw_response": [
+        "The original figure rotated clockwise by 45 degrees is option D."
+      ],
+      "extracted_response": [
+        "D"
+      ],
+      "normalized_pred": [
+        "D"
+      ],
+      "true_false": [
+        true
+      ],
+      "average_score": 1.0
+    },
+    {
+      "id": 132,
+      "img_id": "132.jpg",
+      "category": "Figure Rotation",
+      "question": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 270 degrees?",
+      "answer": "E",
+      "level": null,
+      "question_prompt": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 270 degrees?",
+      "solution": "E",
+      "raw_response": [
+        "The original figure rotated clockwise by 270 degrees is option C."
+      ],
+      "extracted_response": [
+        "C"
+      ],
+      "normalized_pred": [
+        "C"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 133,
+      "img_id": "133.jpg",
+      "category": "Figure Rotation",
+      "question": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 180 degrees?",
+      "answer": "A",
+      "level": null,
+      "question_prompt": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 180 degrees?",
+      "solution": "A",
+      "raw_response": [
+        "The original figure rotated clockwise by 180 degrees is option C."
+      ],
+      "extracted_response": [
+        "C"
+      ],
+      "normalized_pred": [
+        "C"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 134,
+      "img_id": "134.jpg",
+      "category": "Figure Rotation",
+      "question": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 315 degrees?",
+      "answer": "A",
+      "level": null,
+      "question_prompt": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 315 degrees?",
+      "solution": "A",
+      "raw_response": [
+        "To find the original figure rotated clockwise by 315 degrees, we can also think of it as a 45-degree counterclockwise rotation.\n\nLooking at the options:\n\n- Option D matches the original figure when rotated 45 degrees counterclockwise.\n\nTherefore, the answer is **D**."
+      ],
+      "extracted_response": [
+        "D"
+      ],
+      "normalized_pred": [
+        "D"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 135,
+      "img_id": "135.jpg",
+      "category": "Figure Rotation",
+      "question": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 135 degrees?",
+      "answer": "D",
+      "level": null,
+      "question_prompt": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 135 degrees?",
+      "solution": "D",
+      "raw_response": [
+        "The original figure rotated clockwise by 135 degrees is option C."
+      ],
+      "extracted_response": [
+        "C"
+      ],
+      "normalized_pred": [
+        "C"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 136,
+      "img_id": "136.jpg",
+      "category": "Figure Rotation",
+      "question": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 315 degrees?",
+      "answer": "B",
+      "level": null,
+      "question_prompt": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 315 degrees?",
+      "solution": "B",
+      "raw_response": [
+        "The original figure rotated clockwise by 315 degrees is option C."
+      ],
+      "extracted_response": [
+        "C"
+      ],
+      "normalized_pred": [
+        "C"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 137,
+      "img_id": "137.jpg",
+      "category": "Figure Rotation",
+      "question": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 270 degrees?",
+      "answer": "A",
+      "level": null,
+      "question_prompt": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 270 degrees?",
+      "solution": "A",
+      "raw_response": [
+        "The original figure rotated clockwise by 270 degrees is option C."
+      ],
+      "extracted_response": [
+        "C"
+      ],
+      "normalized_pred": [
+        "C"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 138,
+      "img_id": "138.jpg",
+      "category": "Figure Rotation",
+      "question": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 270 degrees?",
+      "answer": "A",
+      "level": null,
+      "question_prompt": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 270 degrees?",
+      "solution": "A",
+      "raw_response": [
+        "The original figure rotated clockwise by 270 degrees is option C."
+      ],
+      "extracted_response": [
+        "C"
+      ],
+      "normalized_pred": [
+        "C"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 139,
+      "img_id": "139.jpg",
+      "category": "Figure Rotation",
+      "question": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 45 degrees?",
+      "answer": "A",
+      "level": null,
+      "question_prompt": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 45 degrees?",
+      "solution": "A",
+      "raw_response": [
+        "The original figure rotated clockwise by 45 degrees is option E."
+      ],
+      "extracted_response": [
+        "E"
+      ],
+      "normalized_pred": [
+        "E"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 140,
+      "img_id": "140.jpg",
+      "category": "Figure Rotation",
+      "question": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 135 degrees?",
+      "answer": "B",
+      "level": null,
+      "question_prompt": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 135 degrees?",
+      "solution": "B",
+      "raw_response": [
+        "The original figure rotated clockwise by 135 degrees is option D."
+      ],
+      "extracted_response": [
+        "D"
+      ],
+      "normalized_pred": [
+        "D"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 141,
+      "img_id": "141.jpg",
+      "category": "Figure Rotation",
+      "question": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 135 degrees?",
+      "answer": "D",
+      "level": null,
+      "question_prompt": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 135 degrees?",
+      "solution": "D",
+      "raw_response": [
+        "The original figure rotated clockwise by 135 degrees is option D."
+      ],
+      "extracted_response": [
+        "D"
+      ],
+      "normalized_pred": [
+        "D"
+      ],
+      "true_false": [
+        true
+      ],
+      "average_score": 1.0
+    },
+    {
+      "id": 142,
+      "img_id": "142.jpg",
+      "category": "Figure Rotation",
+      "question": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 315 degrees?",
+      "answer": "C",
+      "level": null,
+      "question_prompt": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 315 degrees?",
+      "solution": "C",
+      "raw_response": [
+        "The original figure rotated clockwise by 315 degrees is option D."
+      ],
+      "extracted_response": [
+        "D"
+      ],
+      "normalized_pred": [
+        "D"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 143,
+      "img_id": "143.jpg",
+      "category": "Figure Rotation",
+      "question": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 90 degrees?",
+      "answer": "A",
+      "level": null,
+      "question_prompt": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 90 degrees?",
+      "solution": "A",
+      "raw_response": [
+        "The original figure rotated clockwise by 90 degrees is option C."
+      ],
+      "extracted_response": [
+        "C"
+      ],
+      "normalized_pred": [
+        "C"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 144,
+      "img_id": "144.jpg",
+      "category": "Figure Rotation",
+      "question": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 180 degrees?",
+      "answer": "B",
+      "level": null,
+      "question_prompt": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 180 degrees?",
+      "solution": "B",
+      "raw_response": [
+        "The original figure rotated clockwise by 180 degrees is option B."
+      ],
+      "extracted_response": [
+        "B"
+      ],
+      "normalized_pred": [
+        "B"
+      ],
+      "true_false": [
+        true
+      ],
+      "average_score": 1.0
+    },
+    {
+      "id": 145,
+      "img_id": "145.jpg",
+      "category": "Figure Rotation",
+      "question": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 90 degrees?",
+      "answer": "E",
+      "level": null,
+      "question_prompt": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 90 degrees?",
+      "solution": "E",
+      "raw_response": [
+        "The original figure rotated clockwise by 90 degrees is option D."
+      ],
+      "extracted_response": [
+        "D"
+      ],
+      "normalized_pred": [
+        "D"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 146,
+      "img_id": "146.jpg",
+      "category": "Figure Rotation",
+      "question": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 45 degrees?",
+      "answer": "C",
+      "level": null,
+      "question_prompt": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 45 degrees?",
+      "solution": "C",
+      "raw_response": [
+        "The original figure rotated clockwise by 45 degrees is option E."
+      ],
+      "extracted_response": [
+        "E"
+      ],
+      "normalized_pred": [
+        "E"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 147,
+      "img_id": "147.jpg",
+      "category": "Figure Rotation",
+      "question": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 90 degrees?",
+      "answer": "A",
+      "level": null,
+      "question_prompt": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 90 degrees?",
+      "solution": "A",
+      "raw_response": [
+        "The original figure rotated clockwise by 90 degrees is option D."
+      ],
+      "extracted_response": [
+        "D"
+      ],
+      "normalized_pred": [
+        "D"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 148,
+      "img_id": "148.jpg",
+      "category": "Figure Rotation",
+      "question": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 135 degrees?",
+      "answer": "A",
+      "level": null,
+      "question_prompt": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 135 degrees?",
+      "solution": "A",
+      "raw_response": [
+        "The original figure rotated clockwise by 135 degrees is option D."
+      ],
+      "extracted_response": [
+        "D"
+      ],
+      "normalized_pred": [
+        "D"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 149,
+      "img_id": "149.jpg",
+      "category": "Figure Rotation",
+      "question": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 225 degrees?",
+      "answer": "C",
+      "level": null,
+      "question_prompt": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 225 degrees?",
+      "solution": "C",
+      "raw_response": [
+        "The original figure rotated clockwise by 225 degrees matches option C."
+      ],
+      "extracted_response": [
+        "C"
+      ],
+      "normalized_pred": [
+        "C"
+      ],
+      "true_false": [
+        true
+      ],
+      "average_score": 1.0
+    },
+    {
+      "id": 150,
+      "img_id": "150.jpg",
+      "category": "Figure Rotation",
+      "question": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 315 degrees?",
+      "answer": "E",
+      "level": null,
+      "question_prompt": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 315 degrees?",
+      "solution": "E",
+      "raw_response": [
+        "The original figure rotated clockwise by 315 degrees is option **A**."
+      ],
+      "extracted_response": [
+        "A"
+      ],
+      "normalized_pred": [
+        "A"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 151,
+      "img_id": "151.jpg",
+      "category": "Figure Rotation",
+      "question": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 135 degrees?",
+      "answer": "C",
+      "level": null,
+      "question_prompt": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 135 degrees?",
+      "solution": "C",
+      "raw_response": [
+        "The original figure rotated clockwise by 135 degrees is option C."
+      ],
+      "extracted_response": [
+        "C"
+      ],
+      "normalized_pred": [
+        "C"
+      ],
+      "true_false": [
+        true
+      ],
+      "average_score": 1.0
+    },
+    {
+      "id": 152,
+      "img_id": "152.jpg",
+      "category": "Figure Rotation",
+      "question": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 270 degrees?",
+      "answer": "B",
+      "level": null,
+      "question_prompt": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 270 degrees?",
+      "solution": "B",
+      "raw_response": [
+        "The original figure rotated clockwise by 270 degrees is option B."
+      ],
+      "extracted_response": [
+        "B"
+      ],
+      "normalized_pred": [
+        "B"
+      ],
+      "true_false": [
+        true
+      ],
+      "average_score": 1.0
+    },
+    {
+      "id": 153,
+      "img_id": "153.jpg",
+      "category": "Figure Rotation",
+      "question": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 270 degrees?",
+      "answer": "E",
+      "level": null,
+      "question_prompt": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 270 degrees?",
+      "solution": "E",
+      "raw_response": [
+        "The original figure rotated clockwise by 270 degrees is option C."
+      ],
+      "extracted_response": [
+        "C"
+      ],
+      "normalized_pred": [
+        "C"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 154,
+      "img_id": "154.jpg",
+      "category": "Figure Rotation",
+      "question": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 45 degrees?",
+      "answer": "B",
+      "level": null,
+      "question_prompt": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 45 degrees?",
+      "solution": "B",
+      "raw_response": [
+        "The original figure rotated clockwise by 45 degrees is option C."
+      ],
+      "extracted_response": [
+        "C"
+      ],
+      "normalized_pred": [
+        "C"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 155,
+      "img_id": "155.jpg",
+      "category": "Figure Rotation",
+      "question": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 270 degrees?",
+      "answer": "C",
+      "level": null,
+      "question_prompt": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 270 degrees?",
+      "solution": "C",
+      "raw_response": [
+        "The original figure rotated clockwise by 270 degrees is option C."
+      ],
+      "extracted_response": [
+        "C"
+      ],
+      "normalized_pred": [
+        "C"
+      ],
+      "true_false": [
+        true
+      ],
+      "average_score": 1.0
+    },
+    {
+      "id": 156,
+      "img_id": "156.jpg",
+      "category": "Figure Rotation",
+      "question": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 225 degrees?",
+      "answer": "E",
+      "level": null,
+      "question_prompt": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 225 degrees?",
+      "solution": "E",
+      "raw_response": [
+        "The original figure rotated clockwise by 225 degrees matches option C."
+      ],
+      "extracted_response": [
+        "C"
+      ],
+      "normalized_pred": [
+        "C"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 157,
+      "img_id": "157.jpg",
+      "category": "Figure Rotation",
+      "question": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 135 degrees?",
+      "answer": "E",
+      "level": null,
+      "question_prompt": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 135 degrees?",
+      "solution": "E",
+      "raw_response": [
+        "The original figure rotated clockwise by 135 degrees is option C."
+      ],
+      "extracted_response": [
+        "C"
+      ],
+      "normalized_pred": [
+        "C"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 158,
+      "img_id": "158.jpg",
+      "category": "Figure Rotation",
+      "question": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 180 degrees?",
+      "answer": "E",
+      "level": null,
+      "question_prompt": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 180 degrees?",
+      "solution": "E",
+      "raw_response": [
+        "The original figure rotated clockwise by 180 degrees is option C."
+      ],
+      "extracted_response": [
+        "C"
+      ],
+      "normalized_pred": [
+        "C"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 159,
+      "img_id": "159.jpg",
+      "category": "Figure Rotation",
+      "question": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 45 degrees?",
+      "answer": "E",
+      "level": null,
+      "question_prompt": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 45 degrees?",
+      "solution": "E",
+      "raw_response": [
+        "The original figure rotated clockwise by 45 degrees is option C."
+      ],
+      "extracted_response": [
+        "C"
+      ],
+      "normalized_pred": [
+        "C"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 160,
+      "img_id": "160.jpg",
+      "category": "Figure Rotation",
+      "question": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 135 degrees?",
+      "answer": "D",
+      "level": null,
+      "question_prompt": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 135 degrees?",
+      "solution": "D",
+      "raw_response": [
+        "The original figure rotated clockwise by 135 degrees is option C."
+      ],
+      "extracted_response": [
+        "C"
+      ],
+      "normalized_pred": [
+        "C"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 161,
+      "img_id": "161.jpg",
+      "category": "Figure Rotation",
+      "question": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 45 degrees?",
+      "answer": "B",
+      "level": null,
+      "question_prompt": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 45 degrees?",
+      "solution": "B",
+      "raw_response": [
+        "The original figure rotated clockwise by 45 degrees is option B."
+      ],
+      "extracted_response": [
+        "B"
+      ],
+      "normalized_pred": [
+        "B"
+      ],
+      "true_false": [
+        true
+      ],
+      "average_score": 1.0
+    },
+    {
+      "id": 162,
+      "img_id": "162.jpg",
+      "category": "Figure Rotation",
+      "question": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 90 degrees?",
+      "answer": "E",
+      "level": null,
+      "question_prompt": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 90 degrees?",
+      "solution": "E",
+      "raw_response": [
+        "The original figure rotated clockwise by 90 degrees is option D."
+      ],
+      "extracted_response": [
+        "D"
+      ],
+      "normalized_pred": [
+        "D"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 163,
+      "img_id": "163.jpg",
+      "category": "Figure Rotation",
+      "question": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 135 degrees?",
+      "answer": "C",
+      "level": null,
+      "question_prompt": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 135 degrees?",
+      "solution": "C",
+      "raw_response": [
+        "The original figure rotated clockwise by 135 degrees is option A."
+      ],
+      "extracted_response": [
+        "A"
+      ],
+      "normalized_pred": [
+        "A"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 164,
+      "img_id": "164.jpg",
+      "category": "Figure Rotation",
+      "question": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 135 degrees?",
+      "answer": "B",
+      "level": null,
+      "question_prompt": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 135 degrees?",
+      "solution": "B",
+      "raw_response": [
+        "The original figure rotated clockwise by 135 degrees matches option C."
+      ],
+      "extracted_response": [
+        "C"
+      ],
+      "normalized_pred": [
+        "C"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 165,
+      "img_id": "165.jpg",
+      "category": "Figure Rotation",
+      "question": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 270 degrees?",
+      "answer": "D",
+      "level": null,
+      "question_prompt": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 270 degrees?",
+      "solution": "D",
+      "raw_response": [
+        "The original figure rotated clockwise by 270 degrees is option C."
+      ],
+      "extracted_response": [
+        "C"
+      ],
+      "normalized_pred": [
+        "C"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 166,
+      "img_id": "166.jpg",
+      "category": "Figure Rotation",
+      "question": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 315 degrees?",
+      "answer": "B",
+      "level": null,
+      "question_prompt": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 315 degrees?",
+      "solution": "B",
+      "raw_response": [
+        "The original figure rotated clockwise by 315 degrees is option C."
+      ],
+      "extracted_response": [
+        "C"
+      ],
+      "normalized_pred": [
+        "C"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 167,
+      "img_id": "167.jpg",
+      "category": "Figure Rotation",
+      "question": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 315 degrees?",
+      "answer": "B",
+      "level": null,
+      "question_prompt": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 315 degrees?",
+      "solution": "B",
+      "raw_response": [
+        "The original figure rotated clockwise by 315 degrees is option **C**."
+      ],
+      "extracted_response": [
+        "C"
+      ],
+      "normalized_pred": [
+        "C"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 168,
+      "img_id": "168.jpg",
+      "category": "Figure Rotation",
+      "question": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 90 degrees?",
+      "answer": "C",
+      "level": null,
+      "question_prompt": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 90 degrees?",
+      "solution": "C",
+      "raw_response": [
+        "The original figure rotated clockwise by 90 degrees is option D."
+      ],
+      "extracted_response": [
+        "D"
+      ],
+      "normalized_pred": [
+        "D"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 169,
+      "img_id": "169.jpg",
+      "category": "Figure Rotation",
+      "question": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 180 degrees?",
+      "answer": "D",
+      "level": null,
+      "question_prompt": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 180 degrees?",
+      "solution": "D",
+      "raw_response": [
+        "The original figure rotated clockwise by 180 degrees is option C."
+      ],
+      "extracted_response": [
+        "C"
+      ],
+      "normalized_pred": [
+        "C"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 170,
+      "img_id": "170.jpg",
+      "category": "Figure Rotation",
+      "question": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 180 degrees?",
+      "answer": "B",
+      "level": null,
+      "question_prompt": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 180 degrees?",
+      "solution": "B",
+      "raw_response": [
+        "The original figure rotated clockwise by 180 degrees is option C."
+      ],
+      "extracted_response": [
+        "C"
+      ],
+      "normalized_pred": [
+        "C"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 171,
+      "img_id": "171.jpg",
+      "category": "Figure Rotation",
+      "question": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 135 degrees?",
+      "answer": "A",
+      "level": null,
+      "question_prompt": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 135 degrees?",
+      "solution": "A",
+      "raw_response": [
+        "The original figure rotated clockwise by 135 degrees is option D."
+      ],
+      "extracted_response": [
+        "D"
+      ],
+      "normalized_pred": [
+        "D"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 172,
+      "img_id": "172.jpg",
+      "category": "Figure Rotation",
+      "question": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 315 degrees?",
+      "answer": "C",
+      "level": null,
+      "question_prompt": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 315 degrees?",
+      "solution": "C",
+      "raw_response": [
+        "The original figure rotated clockwise by 315 degrees is option C."
+      ],
+      "extracted_response": [
+        "C"
+      ],
+      "normalized_pred": [
+        "C"
+      ],
+      "true_false": [
+        true
+      ],
+      "average_score": 1.0
+    },
+    {
+      "id": 173,
+      "img_id": "173.jpg",
+      "category": "Figure Rotation",
+      "question": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 225 degrees?",
+      "answer": "B",
+      "level": null,
+      "question_prompt": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 225 degrees?",
+      "solution": "B",
+      "raw_response": [
+        "The original figure rotated clockwise by 225 degrees matches option C."
+      ],
+      "extracted_response": [
+        "C"
+      ],
+      "normalized_pred": [
+        "C"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 174,
+      "img_id": "174.jpg",
+      "category": "Figure Rotation",
+      "question": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 45 degrees?",
+      "answer": "B",
+      "level": null,
+      "question_prompt": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 45 degrees?",
+      "solution": "B",
+      "raw_response": [
+        "The original figure rotated clockwise by 45 degrees is option E."
+      ],
+      "extracted_response": [
+        "E"
+      ],
+      "normalized_pred": [
+        "E"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 175,
+      "img_id": "175.jpg",
+      "category": "Figure Rotation",
+      "question": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 45 degrees?",
+      "answer": "A",
+      "level": null,
+      "question_prompt": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 45 degrees?",
+      "solution": "A",
+      "raw_response": [
+        "The original figure rotated clockwise by 45 degrees is option C."
+      ],
+      "extracted_response": [
+        "C"
+      ],
+      "normalized_pred": [
+        "C"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 176,
+      "img_id": "176.jpg",
+      "category": "Figure Rotation",
+      "question": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 270 degrees?",
+      "answer": "E",
+      "level": null,
+      "question_prompt": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 270 degrees?",
+      "solution": "E",
+      "raw_response": [
+        "The original figure rotated clockwise by 270 degrees is option C."
+      ],
+      "extracted_response": [
+        "C"
+      ],
+      "normalized_pred": [
+        "C"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 177,
+      "img_id": "177.jpg",
+      "category": "Figure Rotation",
+      "question": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 315 degrees?",
+      "answer": "B",
+      "level": null,
+      "question_prompt": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 315 degrees?",
+      "solution": "B",
+      "raw_response": [
+        "The original figure rotated clockwise by 315 degrees is option **A**."
+      ],
+      "extracted_response": [
+        "A"
+      ],
+      "normalized_pred": [
+        "A"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 178,
+      "img_id": "178.jpg",
+      "category": "Figure Rotation",
+      "question": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 315 degrees?",
+      "answer": "B",
+      "level": null,
+      "question_prompt": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 315 degrees?",
+      "solution": "B",
+      "raw_response": [
+        "The original figure rotated clockwise by 315 degrees is option **E**."
+      ],
+      "extracted_response": [
+        "E"
+      ],
+      "normalized_pred": [
+        "E"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 179,
+      "img_id": "179.jpg",
+      "category": "Figure Rotation",
+      "question": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 180 degrees?",
+      "answer": "C",
+      "level": null,
+      "question_prompt": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 180 degrees?",
+      "solution": "C",
+      "raw_response": [
+        "The original figure rotated clockwise by 180 degrees is option C."
+      ],
+      "extracted_response": [
+        "C"
+      ],
+      "normalized_pred": [
+        "C"
+      ],
+      "true_false": [
+        true
+      ],
+      "average_score": 1.0
+    },
+    {
+      "id": 180,
+      "img_id": "180.jpg",
+      "category": "Figure Rotation",
+      "question": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 90 degrees?",
+      "answer": "D",
+      "level": null,
+      "question_prompt": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 90 degrees?",
+      "solution": "D",
+      "raw_response": [
+        "The original figure rotated clockwise by 90 degrees is option C."
+      ],
+      "extracted_response": [
+        "C"
+      ],
+      "normalized_pred": [
+        "C"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 181,
+      "img_id": "181.jpg",
+      "category": "Figure Rotation",
+      "question": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 135 degrees?",
+      "answer": "D",
+      "level": null,
+      "question_prompt": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 135 degrees?",
+      "solution": "D",
+      "raw_response": [
+        "The original figure rotated clockwise by 135 degrees is option C."
+      ],
+      "extracted_response": [
+        "C"
+      ],
+      "normalized_pred": [
+        "C"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 182,
+      "img_id": "182.jpg",
+      "category": "Figure Rotation",
+      "question": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 315 degrees?",
+      "answer": "C",
+      "level": null,
+      "question_prompt": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 315 degrees?",
+      "solution": "C",
+      "raw_response": [
+        "The original figure rotated clockwise by 315 degrees is option C."
+      ],
+      "extracted_response": [
+        "C"
+      ],
+      "normalized_pred": [
+        "C"
+      ],
+      "true_false": [
+        true
+      ],
+      "average_score": 1.0
+    },
+    {
+      "id": 183,
+      "img_id": "183.jpg",
+      "category": "Figure Rotation",
+      "question": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 315 degrees?",
+      "answer": "E",
+      "level": null,
+      "question_prompt": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 315 degrees?",
+      "solution": "E",
+      "raw_response": [
+        "The original figure rotated clockwise by 315 degrees is option **E**."
+      ],
+      "extracted_response": [
+        "E"
+      ],
+      "normalized_pred": [
+        "E"
+      ],
+      "true_false": [
+        true
+      ],
+      "average_score": 1.0
+    },
+    {
+      "id": 184,
+      "img_id": "184.jpg",
+      "category": "Figure Rotation",
+      "question": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 45 degrees?",
+      "answer": "C",
+      "level": null,
+      "question_prompt": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 45 degrees?",
+      "solution": "C",
+      "raw_response": [
+        "The original figure rotated clockwise by 45 degrees is option C."
+      ],
+      "extracted_response": [
+        "C"
+      ],
+      "normalized_pred": [
+        "C"
+      ],
+      "true_false": [
+        true
+      ],
+      "average_score": 1.0
+    },
+    {
+      "id": 185,
+      "img_id": "185.jpg",
+      "category": "Figure Rotation",
+      "question": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 180 degrees?",
+      "answer": "C",
+      "level": null,
+      "question_prompt": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 180 degrees?",
+      "solution": "C",
+      "raw_response": [
+        "The original figure rotated clockwise by 180 degrees is option C."
+      ],
+      "extracted_response": [
+        "C"
+      ],
+      "normalized_pred": [
+        "C"
+      ],
+      "true_false": [
+        true
+      ],
+      "average_score": 1.0
+    },
+    {
+      "id": 186,
+      "img_id": "186.jpg",
+      "category": "Figure Rotation",
+      "question": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 90 degrees?",
+      "answer": "A",
+      "level": null,
+      "question_prompt": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 90 degrees?",
+      "solution": "A",
+      "raw_response": [
+        "The original figure rotated clockwise by 90 degrees is option C."
+      ],
+      "extracted_response": [
+        "C"
+      ],
+      "normalized_pred": [
+        "C"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 187,
+      "img_id": "187.jpg",
+      "category": "Figure Rotation",
+      "question": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 135 degrees?",
+      "answer": "A",
+      "level": null,
+      "question_prompt": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 135 degrees?",
+      "solution": "A",
+      "raw_response": [
+        "The original figure rotated clockwise by 135 degrees is option C."
+      ],
+      "extracted_response": [
+        "C"
+      ],
+      "normalized_pred": [
+        "C"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 188,
+      "img_id": "188.jpg",
+      "category": "Figure Rotation",
+      "question": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 315 degrees?",
+      "answer": "B",
+      "level": null,
+      "question_prompt": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 315 degrees?",
+      "solution": "B",
+      "raw_response": [
+        "The original figure rotated clockwise by 315 degrees is option D."
+      ],
+      "extracted_response": [
+        "D"
+      ],
+      "normalized_pred": [
+        "D"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 189,
+      "img_id": "189.jpg",
+      "category": "Figure Rotation",
+      "question": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 135 degrees?",
+      "answer": "B",
+      "level": null,
+      "question_prompt": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 135 degrees?",
+      "solution": "B",
+      "raw_response": [
+        "The original figure rotated clockwise by 135 degrees is option D."
+      ],
+      "extracted_response": [
+        "D"
+      ],
+      "normalized_pred": [
+        "D"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 190,
+      "img_id": "190.jpg",
+      "category": "Figure Rotation",
+      "question": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 45 degrees?",
+      "answer": "C",
+      "level": null,
+      "question_prompt": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 45 degrees?",
+      "solution": "C",
+      "raw_response": [
+        "The original figure rotated clockwise by 45 degrees is option C."
+      ],
+      "extracted_response": [
+        "C"
+      ],
+      "normalized_pred": [
+        "C"
+      ],
+      "true_false": [
+        true
+      ],
+      "average_score": 1.0
+    },
+    {
+      "id": 191,
+      "img_id": "191.jpg",
+      "category": "Figure Rotation",
+      "question": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 45 degrees?",
+      "answer": "B",
+      "level": null,
+      "question_prompt": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 45 degrees?",
+      "solution": "B",
+      "raw_response": [
+        "The original figure rotated clockwise by 45 degrees is option D."
+      ],
+      "extracted_response": [
+        "D"
+      ],
+      "normalized_pred": [
+        "D"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 192,
+      "img_id": "192.jpg",
+      "category": "Figure Rotation",
+      "question": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 315 degrees?",
+      "answer": "C",
+      "level": null,
+      "question_prompt": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 315 degrees?",
+      "solution": "C",
+      "raw_response": [
+        "The original figure rotated clockwise by 315 degrees is option C."
+      ],
+      "extracted_response": [
+        "C"
+      ],
+      "normalized_pred": [
+        "C"
+      ],
+      "true_false": [
+        true
+      ],
+      "average_score": 1.0
+    },
+    {
+      "id": 193,
+      "img_id": "193.jpg",
+      "category": "Figure Rotation",
+      "question": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 270 degrees?",
+      "answer": "B",
+      "level": null,
+      "question_prompt": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 270 degrees?",
+      "solution": "B",
+      "raw_response": [
+        "The original figure rotated clockwise by 270 degrees is option C."
+      ],
+      "extracted_response": [
+        "C"
+      ],
+      "normalized_pred": [
+        "C"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 194,
+      "img_id": "194.jpg",
+      "category": "Figure Rotation",
+      "question": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 180 degrees?",
+      "answer": "E",
+      "level": null,
+      "question_prompt": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 180 degrees?",
+      "solution": "E",
+      "raw_response": [
+        "The original figure rotated clockwise by 180 degrees is option E."
+      ],
+      "extracted_response": [
+        "E"
+      ],
+      "normalized_pred": [
+        "E"
+      ],
+      "true_false": [
+        true
+      ],
+      "average_score": 1.0
+    },
+    {
+      "id": 195,
+      "img_id": "195.jpg",
+      "category": "Figure Rotation",
+      "question": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 90 degrees?",
+      "answer": "E",
+      "level": null,
+      "question_prompt": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 90 degrees?",
+      "solution": "E",
+      "raw_response": [
+        "The original figure rotated clockwise by 90 degrees is option D."
+      ],
+      "extracted_response": [
+        "D"
+      ],
+      "normalized_pred": [
+        "D"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 196,
+      "img_id": "196.jpg",
+      "category": "Figure Rotation",
+      "question": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 45 degrees?",
+      "answer": "D",
+      "level": null,
+      "question_prompt": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 45 degrees?",
+      "solution": "D",
+      "raw_response": [
+        "The original figure rotated clockwise by 45 degrees is option E."
+      ],
+      "extracted_response": [
+        "E"
+      ],
+      "normalized_pred": [
+        "E"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 197,
+      "img_id": "197.jpg",
+      "category": "Figure Rotation",
+      "question": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 225 degrees?",
+      "answer": "B",
+      "level": null,
+      "question_prompt": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 225 degrees?",
+      "solution": "B",
+      "raw_response": [
+        "The original figure rotated clockwise by 225 degrees matches option C."
+      ],
+      "extracted_response": [
+        "C"
+      ],
+      "normalized_pred": [
+        "C"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    },
+    {
+      "id": 198,
+      "img_id": "198.jpg",
+      "category": "Figure Rotation",
+      "question": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 270 degrees?",
+      "answer": "C",
+      "level": null,
+      "question_prompt": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 270 degrees?",
+      "solution": "C",
+      "raw_response": [
+        "The original figure rotated clockwise by 270 degrees is option C."
+      ],
+      "extracted_response": [
+        "C"
+      ],
+      "normalized_pred": [
+        "C"
+      ],
+      "true_false": [
+        true
+      ],
+      "average_score": 1.0
+    },
+    {
+      "id": 199,
+      "img_id": "199.jpg",
+      "category": "Figure Rotation",
+      "question": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 225 degrees?",
+      "answer": "D",
+      "level": null,
+      "question_prompt": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 225 degrees?",
+      "solution": "D",
+      "raw_response": [
+        "The original figure rotated clockwise by 225 degrees is option D."
+      ],
+      "extracted_response": [
+        "D"
+      ],
+      "normalized_pred": [
+        "D"
+      ],
+      "true_false": [
+        true
+      ],
+      "average_score": 1.0
+    },
+    {
+      "id": 200,
+      "img_id": "200.jpg",
+      "category": "Figure Rotation",
+      "question": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 45 degrees?",
+      "answer": "D",
+      "level": null,
+      "question_prompt": "Which of the following 5 options (on the second row) is the original figure (on the first row) rotated clockwise by 45 degrees?",
+      "solution": "D",
+      "raw_response": [
+        "The original figure rotated clockwise by 45 degrees is option B."
+      ],
+      "extracted_response": [
+        "B"
+      ],
+      "normalized_pred": [
+        "B"
+      ],
+      "true_false": [
+        false
+      ],
+      "average_score": 0.0
+    }
+  ]
+}
